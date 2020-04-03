@@ -1,0 +1,898 @@
+/***
+*** @author(Andreas Græsmo & Birgitte Bø)
+***/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+}
+
+#anim2:target ~ #anim-container {
+    display: none;
+}
+
+#anim2:target ~ #anim-container-2 {
+    display: block;
+}
+
+#anim-container{
+    background-color: rgb(179, 209, 255);
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    display: block;
+    
+}
+#anim-container * {
+    position: absolute;
+}
+
+/* wave-animation */
+
+.waves{
+    bottom: 0;
+    height: 150px;
+    z-index: 101;
+}
+
+.wave-1{
+    left: 0px;
+    animation: wave1 3s ease infinite;
+}
+.wave-2{
+    left: 160px;
+    animation: wave2 3s ease infinite;
+}
+
+@keyframes wave1{
+    50%{
+        transform: translate(-20px, 20px);
+    }
+}
+
+@keyframes wave2{
+    50%{
+        transform: translate(20px, 5px);
+    }
+}
+
+/* end wave-animation */
+
+/*cloud-animation*/
+.cloud {
+    width: 300px;
+}
+
+.cloud-1 {
+    right:-350px;
+    top: 90px;
+    animation: clouds 50s linear 0s infinite;
+}
+
+.cloud-2 {
+    right:-350px;
+    top:70px;
+    animation: clouds 50s linear 10s infinite;
+}
+
+.cloud-3 {
+    right: -350px;
+    top:120px;
+    animation: clouds 50s linear 20s infinite;
+}
+
+.cloud-4 {
+    right: -350px;
+    top:70px;
+    animation: clouds 50s linear 30s infinite;
+}
+
+.cloud-5 {
+    right: -350px;
+    top:90px;
+    animation: clouds 50s linear 40s infinite;
+}
+
+@keyframes clouds {
+    100%{
+        right:1700px;
+    }
+}
+
+/*end cloud animation*/
+
+#sun{
+    position: absolute;
+    border-radius: 50% ;
+    background: radial-gradient(circle, #F4D35E, rgba(255, 255, 230, 0), transparent);
+    width: 250px;
+    height: 250px;
+    right: 90px;
+}
+
+#land {
+    bottom: -10px;
+    left:-500px;
+    z-index: 102;
+    height: 120px;
+    
+}
+
+@keyframes landMoves{
+    0%{
+        left: -500px;
+    }
+    99%{
+        left:-999px;
+    }
+    100%{
+        left:-1000px;
+    }
+}
+
+/*Columbus skip i scene1*/
+#skip {
+    height: 620px;
+    bottom: 0;   
+}
+
+#skip-columbus {
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    bottom: -20px;
+    animation-name: shipMoves, shipRocking;
+    animation-duration: 2s, 6s;
+    animation-delay: 12s, 0s;
+    animation-fill-mode: forwards, none;
+    animation-timing-function: linear, ease;
+    animation-iteration-count: 1, infinite;
+}
+
+@keyframes shipMoves{
+    100%{
+        left: -300px;
+    }
+}
+
+@keyframes shipRocking{
+     0%{
+        transform: rotate(-3deg);
+    }
+    50%{
+        transform: rotate(2deg)
+    }
+    100%{
+        transform: rotate(-3deg);
+    }
+}
+
+#cc-map {
+    height: 150px;
+    bottom: 145px;
+    left:730px;   
+}
+
+#cc-speech {
+    background-color: white;
+    width: 200px;
+    padding: 1.1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    bottom: 280px;
+    left:730px;
+    display: none;
+    animation: cc-speech 1s ease forwards;
+}
+
+#cc-map:hover ~ #cc-speech{
+    display: block;
+ 
+}
+#anim1:target ~ #anim-container #cc-map{
+    animation: disableLink 0s 9s forwards;  
+}
+
+#moveSpice:target ~ #anim-container #cc-map{
+    animation: disableLink 0s 9s forwards;  
+}
+
+@keyframes disableLink{
+    100%{
+        pointer-events: none;
+    }
+}
+#anim1:target ~ #anim-container #land {
+    animation: landMoves 4s linear forwards;
+}
+
+@keyframes cc-speech{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+}
+
+/*END Columbus skip i scene1*/
+
+/*EXPECTED SCENARIO*/
+
+/*india*/
+
+#taj-mahal {
+    height: 480px;
+    bottom: 80px;
+    right: -480px;
+    z-index: 101;
+
+}
+
+#land2 {
+    bottom: 0;
+    right: -600px;
+    height: 180px;
+    z-index: 102;
+    
+}
+
+#india {
+    bottom: -10px;
+    height: 600px;
+    width: 1000px;
+    animation: indiaMoves 4s linear forwards;
+    animation-delay: 10s;
+    right: -1500px;
+
+}
+
+@keyframes indiaMoves {
+    0%{
+       right: -1500px;
+    }
+    99%{
+       right:  349px;
+    }
+  
+    100%{
+        right: 350px;
+        
+    }
+}
+
+#indian-wrap{
+     bottom: 50px;
+    right: -200px;
+    height: 200px;
+    z-index: 102;
+}
+#spices {
+    bottom: -10px;
+    right: 110px;
+    z-index: 102;
+    height: 150px
+}
+
+#indian {
+    bottom: 20px;
+    right: 0px;
+    height: 200px;
+    z-index: 102;
+    pointer-events: none;
+}
+
+#indian-speech {
+    background-color: white;
+    width: 200px;
+    padding: 1.1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    bottom: 180px;
+    right: -100px;
+    z-index: 102;
+    display: none;
+    animation: cc-speech 1s ease forwards;
+}
+
+#indian:hover ~ #indian-speech{
+    display: block;
+} 
+
+#mandalaLink{
+    height: 60px;
+    width: 60px;
+    right: -70px;
+    bottom: 390px;
+}
+
+#mandala {
+    height: 60px;
+    z-index: 102;
+}
+
+#mandala-click {
+    top:-2px;
+    right: -8px;
+    background-color: black;
+}
+
+#anim1:target ~ #anim-container #india #mandalaLink #mandala-click{
+  animation: click-here 10s 5s infinite ease-in-out;
+}
+#moveSpice:target ~ #anim-container #indian-wrap{
+    animation: moveSpice 2s ease forwards;
+}
+
+#moveSpice:target ~ #anim-container #indian-wrap #indian{
+    pointer-events: auto;
+}
+
+#moveSpice:target ~ #anim-container #land {
+    animation: landMoves 0s linear forwards;
+}
+#moveSpice:target ~ #anim-container .inactivelink{
+    animation: disableLink 0s forwards;  
+}
+@keyframes moveSpice{
+    100%{
+        right: 120px;
+        bottom: 20px;
+        
+    }
+}
+
+/*end india*/
+
+/*fish*/
+
+#fish {
+    height: 100px;
+    bottom: -90px;
+    z-index: 101;
+    left: 600px;
+}
+ 
+@keyframes fishJumps {
+        0%{
+            bottom: -90px;
+            left:600px;
+            transform: rotate(45deg) scaleX(1);
+        }
+        1%{
+            bottom: -90px;
+            left:600px;
+            transform: rotate(45deg);    
+        }
+      
+        50%{
+            bottom: 50px;
+            transform: rotate(0deg);
+        }
+      
+        99.9999%{
+            bottom:-90px;
+            left:300px;
+            transform: rotate(-45deg) scaleX(1)
+        }
+        100%{
+            bottom:-90px;
+            left:300px;
+            transform: rotate(-45deg) scaleX(-1);
+        }
+}
+
+#anim1:target ~ #anim-container #fish{
+    animation: fishJumps 2s ease-in-out 2s;
+    animation-iteration-count: 2;
+}
+
+/*end fish*/
+
+/*WHAT REALLY HAPPENED*/
+
+#anim-container-2 {
+    background-color: rgb(179, 209, 255);
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    display: none;
+    
+}
+
+#anim-container-2 *{
+    position: absolute;
+}
+
+/*Skip i scene 2*/
+
+#skip-columbus2 {
+    position: absolute;
+    z-index: 100;
+    left: -1000px;
+    bottom: 0;
+    height: 620px;
+    width: 1153px; 
+    animation: ship2 5s ease forwards;  
+}
+
+#skip2{
+    height: 100%;
+    animation: shipRocking 6s ease infinite;
+}
+
+#ship2-click{
+    bottom: 130px;
+    right: 300px;
+    background-color: white;
+    opacity: 0;
+}
+
+.click-here{
+    height: 75px;
+    width: 75px;
+    transform: scale(1);
+    opacity: 0;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 999;
+    
+}
+
+@keyframes click-here{
+  0%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  7.5%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  7.5001%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  15%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  15.0001%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  22.5%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  22.5001%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+#cclink2 {
+    bottom: 145px;
+    height: 150px;
+    left:730px;
+}
+
+#cc-map2 {
+    height: 150px;
+    z-index: 1000;
+    
+}
+
+#cc-speech {
+    background-color: white;
+    width: 160px;
+    padding: 1.1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    bottom: 280px;
+    left:730px;
+    display: none;
+    animation: cc-speech 1s ease forwards;
+}
+
+
+#anim2:target ~ #anim-container-2 #skip-columbus2 #ship2-click{
+  animation: click-here 10s 5s infinite ease-in-out;
+}
+
+#cctarget:target ~ #anim-container-2 #cclink2 {
+    animation: ccmapmove 2s ease-in-out 0.5s forwards;          
+}
+
+#cctarget:target ~ #anim-container-2 #cc-fremme-wrap {
+    animation: ccfremmemove 2s ease-in-out 2.3s forwards;
+}
+
+#cctarget:target ~ #anim-container-2 {
+    display: block;
+}
+
+#cctarget:target ~ #anim-container {
+    display:none;    
+}
+
+#cctarget:target ~ #anim-container-2 #skip-columbus2 .inactivelink {
+    pointer-events: none;
+}
+
+@keyframes ship2 {
+    100%{
+        left:-500px;    
+    }
+}
+
+@keyframes ccmapmove {
+    55%, 60%{
+        left: 910px;
+    }
+    60%{
+        bottom: 168px;
+    }
+    70%{
+        left: 910px;
+        bottom:168px;
+    }
+    99.9999%{
+        bottom:0;
+        left:910px;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes ccfremmemove {
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility: visible;
+        left: 670px;
+    }
+}
+
+/*END Skip i scene 2*/
+
+/*I amerika*/
+
+#beach {
+    bottom: -10px;
+    right: -300px;
+    z-index: 102;
+    height: 200px
+    
+}
+
+#cc-fremme-wrap {
+    bottom: 40px;
+    left:400px;
+    z-index: 103;
+    visibility: hidden;
+}
+
+#cc-fremme {
+    transform: scaleX(-1);
+    bottom: 0;
+}
+
+#cc-speech-fremme {
+    background-color: white;
+    width: 200px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    bottom:140px;
+    left:70px; 
+    display: none;
+    animation: cc-speech 3s ease forwards;
+}
+
+#cclink2:hover ~ #cc-speech{
+    display: block;
+}
+
+#cc-fremme-wrap:hover > #cc-speech-fremme {
+    display: block;
+}
+
+#tipi {
+    height: 350px;
+    bottom: 60px;
+    right: 100px;
+    z-index: 103;
+}
+
+
+/*INDIANER*/
+
+#indianer-wrap:hover > #in-speech {
+    display: block;
+}
+
+#in-speech {
+    background-color: white;
+    width: 200px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    bottom:140px;
+    left:70px; 
+    display: none;
+    animation: cc-speech 3s ease forwards;
+}
+
+#cctarget:target ~ #anim-container-2 #indianer-wrap {
+    pointer-events: auto;
+}
+
+#indianer-wrap {
+    bottom:40px;
+    right: 400px;
+    z-index: 103;
+    height: 150px;
+    pointer-events: none;
+}
+
+#indianer {
+   bottom:0;
+   right: 0;
+   z-index: 103;
+   height: 150px;
+}
+
+#smoke {
+    bottom: 57px;
+    right:92px;
+    height: 50px;
+    z-index: 103;
+    opacity: 0.9;
+    animation: smoke 4s linear 0s infinite;
+}
+
+@keyframes smoke{
+    0%{
+        transform:rotate(-10deg);
+        
+    }
+    50%{
+        transform: rotate(5deg) scalex(0.7);
+    
+    }
+    100%{
+        transform:rotate(-10deg);
+    }
+}
+
+/*END INDIANER*/
+
+/*END I Amerika*/
+
+/*** POPUP START ***/
+#arnfinn1 #popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  animation: pop 1s 0s forwards;
+  transform-origin: right;
+}
+
+#arnfinn2 #popup-head, #arnfinn3 #popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  transform-origin: right;
+}
+
+#head-link{
+  height: 220px;
+  width: 135px;
+  right: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+    z-index: 999;
+}
+
+#head-link:hover{
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+.popup-speech-buble{
+    width: 220px;
+    height: 145px;
+    padding: 15px;
+    top: 25px;
+    right: 200px;
+    opacity: 0;
+    background-color: #fafafa;
+    border-radius: 20%;
+    transform-origin: bottom right;
+    z-index: 999;
+}
+
+#arnfinn1 #popup-speech-bubble1{
+    animation: pop-in-long 5s 0.1s forwards;
+}
+
+.bubble-pointer-popup{
+  width: 60px;
+  top: 85%;
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+.popup-tekst{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 18px;
+  text-align: right;
+  position: relative !important;
+}
+/*** POPUP END ***/
+
+/*** THE END ***/
+#arnfinn1, #arnfinn2, #arnfinn3{
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#klar:target ~ #anim-container #arnfinn1{
+    display: block;
+    z-index: 999;
+}
+
+#klar:target ~ #anim-container *{
+    animation-play-state:paused !important;
+}
+
+#klar:target ~ #anim-container #arnfinn1 *{
+    animation-play-state:running !important;
+}
+
+#moveSpice:target ~ #anim-container #arnfinn2 {
+    z-index: 999 !important;
+    animation-play-state:running !important;
+    animation: pop 1s 0s forwards;
+}
+
+#moveSpice:target ~ #anim-container #arnfinn2 #popup-head{
+    animation-play-state:running !important;
+    animation: pop 1s 6s forwards;
+}
+
+#moveSpice:target ~ #anim-container #arnfinn2 #popup-speech-bubble1{
+    animation-play-state:running !important;
+    animation: pop-in-long 5s 6.1s forwards;
+}
+
+#cctarget:target ~ #anim-container-2 #arnfinn3 {
+    z-index: 999 !important;
+    animation-play-state:running !important;
+    animation: pop 1s 0s forwards;
+}
+
+#cctarget:target ~ #anim-container-2 #arnfinn3 #popup-head{
+    animation-play-state:running !important;
+    animation: pop 1s 10s forwards;
+}
+
+#cctarget:target ~ #anim-container-2 #arnfinn3 #popup-speech-bubble1{
+    animation-play-state:running !important;
+    animation: pop-in-long 10s 6.1s forwards;
+}
+
+#arnfinn2, #arnfinn3{
+    transition: z-index 2s linear;
+    transition-delay: 6s;
+}
+
+/*** THE END ***/
+
+/*** ANIMATIONS START ***/
+
+@keyframes pop{
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1.0);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  20% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  40% {
+    transform: scale3d(.91, .91, .91);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop-in-out{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+}
+
+@keyframes pop-in-long{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*** ANIMATIONS END ***/
+
+
+

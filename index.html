@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+  <header>
+    <!----
+    ----   @author (Philip Aarseth & Tord Jon)
+    ---- Philip har fokusert på generell layout, animasjoner
+    ---- Tord har fokusert på grunnleggende oppsett av kart og interaksjon av knapper og generell layout
+    --->
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <meta charset="utf-8">
+  </header>
+  <body>
+    <div id="kontainer">
+      <div id="klar"></div>
+
+      <!-- SNAKKEBOBLE START -->
+      <div class="snakkeboble" id="intro-speech-buble">
+        <img id="bubble-pointer-intro" src="img/speech-bubble-point-01.svg">
+        <p id="tekst3" class="snakkeboble-tekst"><a class="fixlink" href="#tekst4">Forrige uke var jeg i en liten tur i Olympus, og så fant jeg tilfeldigvis dette kartet hos Zevs.</a></p>
+        <p id="tekst4" class="snakkeboble-tekst"><a class="fixlink" href="#tekst5">Det var ganske støvete, så han bryr seg sikkert ikke om jeg låner det på permanent basis.</a></p>
+        <p id="tekst5" class="snakkeboble-tekst"><a class="fixlink" href="#tekst6">Den viser til historiske hendelser der folks begrensede kreativitet førte til drastiske annerledes utfall enn det de hadde sett for seg.</a></p>
+        <p id="tekst6" class="snakkeboble-tekst"><a class="fixlink" href="#klar">Kanskje kan vi lære av fortiden for å utvikle våre egne kreative evner for å bedre se for oss fremtiden.</a></p>
+        <p id="tekst1" class="snakkeboble-tekst">Hei! Mitt navn er Arnfinn, hyggelig å møte deg!</p>
+        <p id="tekst2" class="snakkeboble-tekst"><a class="fixlink" href="#tekst3">Trykk på teksten for å vise meg at du er klar til å gå videre!</a></p>
+        <div id="snakkeboble-klikk" class="klikk-her"></div>
+      </div>
+      <!-- SNAKKEBOBLE END -->
+
+      <!-- KARAKTER START -->
+      <div id="karakter">
+        <img src="img/arnfinn-shoulders.svg">
+        <div id="shine-fade">
+          <img id="shine" src="img/shine.svg">
+        </div>
+        <a href="kart.html#start">
+          <img id="kart" src="img/map-hands.svg">
+        </a>
+        <div id="kart-klikk" class="klikk-her"></div>
+      </div>
+      <!-- KARAKTER END -->
+
+      <!-- POPUP START -->
+      <a id="head-link" href="index.html">
+      <div id="popup-head">
+        <img src="img/arnfinn-head.svg">
+      </div></a>
+      <div class="snakkeboble popup-speech-buble" id="popup-speech-bubble1">
+        <img class="bubble-pointer-popup" src="img/speech-bubble-point-01.svg">
+        <p class="popup-tekst">Trykk på kartet når du er klar til å gå videre!</p>
+      </div>
+      <!-- POPUP END -->
+
+    </div>
+    <!-- END KONTAINER-->
+  </body>
+</html>

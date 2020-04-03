@@ -1,0 +1,1433 @@
+/* SITE START */
+html, body {
+  margin: auto;
+}
+*{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+}
+
+#anim-container{
+    width: 1540px;
+    height: 735px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#bakgrunn{
+    width: 1540px;
+    height: 760px;
+    z-index: -1;
+    position: fixed;
+
+}
+/* SITE END */
+
+
+/* HUMANS */
+#olav{
+    width: 400px;
+    height: 150px;
+    left:  40px;
+    bottom: 125px;
+    z-index: 5;
+    position: fixed;
+    animation: olavMoves 40s linear forwards;
+}
+
+#man{
+    height: 85px;
+    left: 720px;
+    bottom: 230px;
+    z-index: 2;
+    position: fixed;
+    animation: manMoves 6s linear;
+    animation-delay: 21s;
+}
+
+#man2{
+    height: 100px;
+    left: 100px;
+    bottom: 150px;
+    z-index: 3;
+    position: fixed;
+    animation: man2Moves 40s linear forwards;
+}
+
+#man3{
+    height: 80px;
+    left: 1030px;
+    bottom: 250px;
+    z-index: 2;
+    position: fixed;
+    animation: man3Moves 6s linear;
+    animation-delay: 31s;
+}
+
+#lady{
+    width: 60px;
+    height: 70px;
+    left: 380px;
+    bottom: 255px;
+    z-index: 2;
+    position: fixed;
+    animation: ladyMoves 6s linear;
+    animation-delay: 6s;
+}
+
+#lady2{
+    height: 110px;
+    left: 60px;
+    bottom: 100px;
+    z-index: 3;
+    position: fixed;
+    animation: lady2Moves 40s linear forwards;
+}
+/* HUMANS ENDS */
+
+
+
+/* SPEACHES */
+#olavSpeak{
+    z-index: 3;
+    left: 250px;
+    bottom: 250px;
+    width: 120px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: olavSpeaks 3s;
+    animation-delay: 5s;
+}
+
+#olavSpeak2{
+    z-index: 3;
+    left: 550px;
+    bottom: 250px;
+    width: 120px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: olavSpeaks2 3s;
+    animation-delay: 19s;
+}
+
+#olavSpeak3{
+    z-index: 3;
+    left: 900px;
+    bottom: 250px;
+    width: 120px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: olavSpeaks3 3s;
+    animation-delay: 30s;
+}
+
+#ladySpeak{
+    z-index: 3;
+    left: 380px;
+    bottom: 250px;
+    width: 50px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: ladySpeaks 3s;
+    animation-delay: 6.5s;
+}
+
+#manSpeak{
+    z-index: 3;
+    left: 690px;
+    bottom: 200px;
+    width: 50px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: manSpeaks 3s;
+    animation-delay: 22s;
+}
+
+#man3Speak{
+    z-index: 3;
+    left: 1050px;
+    bottom: 220px;
+    width: 50px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: man3Speaks 3s;
+    animation-delay: 32s;
+}
+/* SPEACHES ENDS */
+
+
+
+/* HOUSES */
+#house{
+    width: 400px;
+    height: 250px;
+    left:  200px;
+    bottom: 200px;
+    z-index: 2;
+    position: fixed;
+
+}
+
+#house2{
+    width: 400px;
+    height: 250px;
+    left:  550px;
+    bottom: 210px;
+    z-index: 2;
+    position: fixed;
+}
+
+#house3{
+    width: 400px;
+    height: 250px;
+    left:  950px;
+    bottom: 215px;
+    z-index: 2;
+    position: fixed;
+}
+/* HOUSES ENDS*/
+
+
+
+/* DOORS START */
+#door1{
+    width: 70px;
+    height: 60px;
+    left:  378px;
+    bottom: 260px;
+    z-index: 2;
+    position: fixed;
+    animation: door1Moves 10s linear;
+    transform-origin: right;
+    animation-delay: 5.8s;
+
+}
+
+#door2{
+    width: 65px;
+    height: 73px;
+    left:  720px;
+    bottom: 234px;
+    z-index: 2;
+    position: fixed;
+    animation: door2Moves 12s linear;
+    transform-origin: right;
+    animation-delay: 20s;
+}
+
+#door3{
+    width: 62px;
+    height: 77px;
+    left:  1036px;
+    bottom: 250px;
+    z-index: 2;
+    position: fixed;
+    animation: door3Moves 12s linear;
+    transform-origin: right;
+    animation-delay: 30s;
+}
+/* DOORS ENDS */
+
+
+
+/* TREES */
+#tree{
+    width: 400px;
+    height: 150px;
+    left:  -50px;
+    bottom: 250px;
+    z-index: 1;
+    position: fixed;
+}
+
+#tree2{
+    width: 400px;
+    height: 150px;
+    left:  1300px;
+    bottom: 250px;
+    z-index: 1;
+    position: fixed;
+}
+/* TREES ENDS */
+
+
+
+/* MOUSE */
+#mouse{
+    width: 80px;
+    height: 70px;
+    left:  150px;
+    bottom: 240px;
+    z-index: 1;
+    position: fixed;
+    transition: 3s linear;
+    z-index: 1;
+}
+
+#mousetalks{
+    z-index: 2;
+    left: 160px;
+    bottom: 275px;
+    width: 90px;
+    position: fixed;
+    transition: all 0.6s;
+    display: none;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#mouse:hover ~ #mousetalks{
+    left: 210px;
+    bottom: 270px;
+    z-index: 150;
+    display: block;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+}
+/*MOUSE ENDS*/
+
+
+/* DOORS MOVE */
+@keyframes door1Moves{
+    10%{
+        transform: scaleX(-.5);
+    }
+}
+
+@keyframes door2Moves{
+    10%{
+        transform: scaleX(-.5);
+    }
+}
+
+@keyframes door3Moves{
+    10%{
+        transform: scaleX(-.5);
+    }
+}
+/* DOORS MOVE ENDS */
+
+
+
+/* HUMANS MOVE */
+@keyframes olavMoves{
+    10%{
+        left: 130px;
+    }
+    30%{
+        left: 130px;
+    }
+    45%{
+        left: 450px;
+    }
+    65%{
+        left: 450px;
+    }
+    75%{
+        left: 800px;
+    }
+    95%{
+        left: 800px;
+    }
+    100%{
+        left: 1550px;
+    }
+}
+
+@keyframes manMoves{
+    10%{
+        bottom: 140px;
+        z-index: 2;
+    }
+    90%{
+        bottom: 140px;
+    }
+    100%{
+        bottom: 230px;
+    }
+}
+
+@keyframes man2Moves{
+    10%{
+        left: 130px;
+    }
+    30%{
+        left: 130px;
+    }
+    45%{
+        left: 450px;
+    }
+    65%{
+        left: 450px;
+    }
+    75%{
+        left: 800px;
+    }
+    95%{
+        left: 800px;
+    }
+    100%{
+        left: 1550px;
+    }
+}
+
+@keyframes man3Moves{
+    10%{
+        bottom: 150px;
+        z-index: 6;
+    }
+    90%{
+        bottom: 150px;
+    }
+    100%{
+        bottom: 250px;
+    }
+}
+
+@keyframes ladyMoves{
+    10%{
+        bottom: 185px;
+        z-index: 2;
+    }
+    90%{
+        bottom: 185px;
+    }
+    100%{
+        bottom: 255px;
+    }
+}
+@keyframes lady2Moves{
+   10%{
+        left: 130px;
+    }
+    30%{
+        left: 130px;
+    }
+    45%{
+        left: 450px;
+    }
+    65%{
+        left: 450px;
+    }
+    75%{
+        left: 800px;
+    }
+    95%{
+        left: 800px;
+    }
+    100%{
+        left: 1550px;
+    }
+
+}
+
+/* HUMANS MOVE ENDS */
+
+/* SPEACHES ANIMATION */
+
+@keyframes olavSpeaks{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes olavSpeaks2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes olavSpeaks3{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes ladySpeaks{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes manSpeaks{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes man3Speaks{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* SPEACHES ANIMATION ENDS */
+
+/* CLOUDS */
+
+.cloud {
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+}
+
+.cloud-1 {
+    right:-350px;
+    top: 90px;
+    animation: clouds 50s linear 1s;
+}
+
+.cloud-2 {
+    right:-350px;
+    top:70px;
+    animation: clouds 60s linear 8s;
+}
+
+.cloud-3 {
+    right: -350px;
+    top:120px;
+    animation: clouds 70s linear 12s;
+}
+
+.cloud-4 {
+    right: -350px;
+    top:70px;
+    animation: clouds 80s linear 16s;
+}
+
+.cloud-5 {
+    right: -350px;
+    top:90px;
+    animation: clouds 100s linear 20s;
+}
+
+@keyframes clouds {
+    100%{
+        right:1700px;
+    }
+}
+/* CLOUDS ENDS */
+
+/*NEDENFOR ER DEL 2 */
+
+#anim-container2{
+    width: 1540px;
+    height: 735px;
+    margin: auto;
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+
+
+/* HUMANS SCENE 2 */
+
+#olavscene2{
+    width: 400px;
+    height: 150px;
+    left:  40px;
+    bottom: 125px;
+    z-index: 5;
+    position: fixed;
+    animation: olavMovesscene2 40s linear forwards;
+}
+
+#manscene2{
+    height: 85px;
+    left: 720px;
+    bottom: 230px;
+    z-index: 1;
+    position: fixed;
+    animation: manMovesscene2 6s linear forwards;
+    animation-delay: 21s;
+}
+
+#man2scene2{
+    height: 100px;
+    left: 100px;
+    bottom: 150px;
+    z-index: 3;
+    position: fixed;
+    animation: man2Movesscene2 40s linear forwards;
+}
+
+#man3scene2{
+    height: 80px;
+    left: 1030px;
+    bottom: 250px;
+    z-index: 2;
+    position: fixed;
+    animation: man3Movesscene2 6s linear forwards;
+    animation-delay: 31s;
+}
+
+#ladyscene2{
+    width: 60px;
+    height: 70px;
+    left: 380px;
+    bottom: 255px;
+    z-index: 2;
+    position: fixed;
+    animation: ladyMovesscene2 6s linear;
+    animation-delay: 6s;
+}
+
+#lady2scene2{
+    height: 110px;
+    left: 60px;
+    bottom: 100px;
+    z-index: 3;
+    position: fixed;
+    animation: lady2Movesscene2 40s linear forwards;
+}
+
+/* HUMANS SCENE 2 ENDS */
+
+/* SPEACHES */
+
+#olavSpeakscene2{
+    z-index: 3;
+    left: 250px;
+    bottom: 250px;
+    width: 120px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: olavSpeaksscene2 3s;
+    animation-delay: 5s;
+}
+
+#olavSpeak2scene2{
+    z-index: 3;
+    left: 600px;
+    bottom: 250px;
+    width: 120px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: olavSpeaks2scene2 3s;
+    animation-delay: 19s;
+}
+
+#olavSpeak3scene2{
+    z-index: 3;
+    left: 900px;
+    bottom: 250px;
+    width: 120px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: olavSpeaks3scene2 3s;
+    animation-delay: 30s;
+}
+
+#ladySpeakscene2{
+    z-index: 3;
+    left: 380px;
+    bottom: 250px;
+    width: 50px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: ladySpeaksscene2 3s;
+    animation-delay: 6.5s;
+}
+
+#manSpeakscene2{
+    z-index: 3;
+    left: 700px;
+    bottom: 230px;
+    width: 50px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: manSpeaksscene2 3s;
+    animation-delay: 22s;
+}
+
+#man3Speakscene2{
+    z-index: 3;
+    left: 1050px;
+    bottom: 220px;
+    width: 50px;
+    position: fixed;
+    transition: all 0.6s;
+    opacity: 0;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+    animation: man3Speaksscene2 3s;
+    animation-delay: 32s;
+}
+
+/*SPEACHES SCENE 2 ENDS*/
+
+/* HOUSES SCENE 2 */
+#house{
+    width: 400px;
+    height: 250px;
+    left:  200px;
+    bottom: 200px;
+    z-index: 2;
+    position: fixed;
+}
+
+#house2{
+    width: 400px;
+    height: 250px;
+    left:  550px;
+    bottom: 210px;
+    z-index: 2;
+    position: fixed;
+}
+
+#house3{
+    width: 400px;
+    height: 250px;
+    left:  950px;
+    bottom: 215px;
+    z-index: 2;
+    position: fixed;
+}
+
+/* HOUSES SCENE 2 ENDS*/
+
+/* DOORS SCENE 2 */
+#door1scene2{
+    width: 70px;
+    height: 60px;
+    left:  378px;
+    bottom: 260px;
+    z-index: 2;
+    position: fixed;
+    animation: door1scene2Moves 6s linear;
+    transform-origin: right;
+    animation-delay: 5.8s;
+
+}
+
+#door2scene2{
+    width: 65px;
+    height: 73px;
+    left:  720px;
+    bottom: 234px;
+    z-index: 2;
+    position: fixed;
+    animation: door2scene2Moves 6s linear;
+    transform-origin: right;
+    animation-delay: 20s;
+}
+
+#door3scene2{
+    width: 62px;
+    height: 77px;
+    left:  1036px;
+    bottom: 250px;
+    z-index: 2;
+    position: fixed;
+    animation: door3scene2Moves 6s linear;
+    transform-origin: right;
+    animation-delay: 30s;
+}
+
+/* DOORS SCENE 2 ENDS */
+
+/* MOUSE SCENE 2*/
+#mousescene2{
+    width: 80px;
+    height: 70px;
+    left:  150px;
+    bottom: 240px;
+    z-index: 1;
+    position: fixed;
+    transition: 3s linear;
+    z-index: 1;
+}
+
+#mousescene2:hover ~ #mousetalks{
+    left: 210px;
+    bottom: 270px;
+    z-index: 150;
+    display: block;
+    font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+    background: rgba(0, 0, 0, .5);
+
+}
+
+/* MOUSE SCENE 2 END */
+
+
+/* DOORS SCENE 2 MOVE */
+@keyframes door1scene2Moves{
+    10%{
+        transform: scaleX(-.5);
+    }
+}
+
+@keyframes door2scene2Moves{
+    10%{
+        transform: scaleX(-.5);
+    }
+}
+
+@keyframes door3scene2Moves{
+    10%{
+        transform: scaleX(-.5);
+    }
+}
+
+/* DOORS SCENE 2 MOVE ENDS */
+
+/* HUMANS SCENE 2 MOVE */
+@keyframes olavMovesscene2{
+    10%{
+        left: 130px;
+    }
+    30%{
+        left: 130px;
+    }
+    45%{
+        left: 500px;
+    }
+    57%{
+        transform: rotate(0deg);
+    }
+    58%{
+        transform: rotate(-120deg);
+    }
+    59%{
+        transform: rotate(0deg);
+    }
+    65%{
+        left: 500px;
+    }
+    75%{
+        left: 750px;
+    }
+    95%{
+        left: 750px;
+    }
+    100%{
+        left: 1550px;
+    }
+}
+
+@keyframes manMovesscene2{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        bottom: 140px;
+        z-index: 2;
+    }
+    20%{
+        bottom: 140px;
+    }
+    45%{
+        transform: rotate(0deg);
+    }
+    48%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: rotate(360deg);
+    }
+    65%{
+        transform: rotate(450deg);
+    }
+    100%{
+        bottom: 140px;
+        transform: rotate(450deg)
+    }
+}
+
+@keyframes man2Movesscene2{
+    10%{
+        left: 130px;
+    }
+    30%{
+        left: 130px;
+    }
+    45%{
+        left: 450px;
+    }
+    65%{
+        left: 450px;
+    }
+    75%{
+        left: 800px;
+    }
+    95%{
+        left: 800px;
+    }
+    100%{
+        left: 1550px;
+    }
+}
+
+@keyframes man3Movesscene2{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        bottom: 150px;
+        z-index: 2;
+    }
+    20%{
+        bottom: 150px;
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    52%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: rotate(360deg);
+    }
+    65%{
+        transform: rotate(450deg);
+    }
+    100%{
+        bottom: 150px;
+        transform: rotate(450deg)
+    }
+}
+
+@keyframes ladyMovesscene2{
+    10%{
+        bottom: 185px;
+        z-index: 2;
+    }
+    90%{
+        bottom: 185px;
+    }
+    100%{
+        bottom: 255px;
+    }
+}
+@keyframes lady2Movesscene2{
+   10%{
+        left: 130px;
+    }
+    30%{
+        left: 130px;
+    }
+    45%{
+        left: 450px;
+    }
+    65%{
+        left: 450px;
+    }
+    75%{
+        left: 1000px;
+    }
+    83%{
+        transform: rotate(0deg);
+    }
+    85%{
+        transform: rotate(-120deg);
+    }
+    87%{
+        transform: rotate(0deg);
+    }
+    95%{
+        left: 1000px;
+    }
+    100%{
+        left: 1550px;
+    }
+
+}
+/* HUMAN SCENE 2 MOVES ENDS */
+
+/* SPEACHES SCENE 2 ANIMATION */
+@keyframes olavSpeaksscene2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes olavSpeaks2scene2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes olavSpeaks3scene2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes ladySpeaksscene2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes manSpeaksscene2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes man3Speaksscene2{
+    1%{
+    opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* SPEACHES SCENE 2 ANIMATION ENDS */
+
+/* CLOUDS SCENE 2 START */
+
+.cloudscene2 {
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+}
+
+.cloud-1scene2 {
+    right:-350px;
+    top: 90px;
+    animation: cloudsscene2 50s linear 1s;
+}
+
+.cloud-2scene2 {
+    right:-350px;
+    top:70px;
+    animation: cloudsscene2 60s linear 8s;
+}
+
+.cloud-3scene2 {
+    right: -350px;
+    top:120px;
+    animation: cloudsscene2 70s linear 12s;
+}
+
+.cloud-4scene2 {
+    right: -350px;
+    top:70px;
+    animation: cloudsscene2 80s linear 16s;
+}
+
+.cloud-5scene2 {
+    right: -350px;
+    top:90px;
+    animation: cloudsscene2 100s linear 20s;
+}
+
+@keyframes cloudsscene2 {
+    100%{
+        right:1700px;
+    }
+}
+
+/* CLOUDS SCENE 2 ENDS */
+
+/* ARNFINN STARTS */
+
+#klar:target ~ #anim-container *{
+    animation-play-state: paused !important;
+}
+#arnfinn1 * , #arnfinn2 *, #arnfinn3 *{
+    position: absolute;
+}
+
+@keyframes synlig{
+    0%{
+         z-index: -1;
+    }
+    100%{
+        z-index: 1000;
+    }
+}
+
+#arnfinn1, #arnfinn2, #arnfinn3{
+    display: none;
+}
+
+#klar:target ~ #anim-container #arnfinn1{
+    display: block;
+}
+
+#klar:target ~ #anim-container #arnfinn1 *,  #anim1:target ~ #anim-container #arnfinn2 *{
+    animation-play-state: running !important;
+}
+
+#anim1:target ~ #anim-container #arnfinn2{
+    display: block;
+}
+
+#arnfinn2 * {
+    z-index: -1;
+}
+
+#anim1:target ~ #anim-container #arnfinn2 * {
+    animation: synlig 1s infinite;
+    animation-delay: 40s;
+    animation-fill-mode: forwards;
+}
+#anim1:target ~ #anim-container #arnfinn2 #popup-head{
+    animation: pop 1s 40s forwards;
+}
+
+#anim1:target ~ #anim-container #arnfinn2 #popup-speech-bubble1{
+    animation: synlig, pop-in-long;
+    animation-duration: 0s, 5s;
+    animation-iteration-count: 1, 1;
+    animation-delay: 40s, 40s;
+    animation-fill-mode:forwards, forwards;
+}
+
+#anim2:target ~ #anim-container2 #arnfinn3{
+    display: block;
+}
+
+#arnfinn3 * {
+    z-index: -1;
+}
+
+#anim2:target ~ #anim-container2 #arnfinn3 * {
+    animation: synlig 1s infinite;
+    animation-delay: 40s;
+    animation-fill-mode: forwards;
+}
+
+#anim2:target ~ #anim-container2 #arnfinn3 #popup-head{
+    animation: pop 1s 40s forwards;
+
+}
+
+#anim2:target ~ #anim-container2 #arnfinn3 #popup-speech-bubble1{
+    animation: synlig, pop-in-long;
+    animation-duration: 0s, 5s;
+    animation-iteration-count: 1, 1;
+    animation-delay: 40s, 40s;
+    animation-fill-mode:forwards, forwards;
+}
+
+/*her vises arnfinn1*/
+
+/*#anim1:target /*her vises arnfinn2 etter delay*/
+
+/*#anim2:target /*her vises arnfinn3 etter et delay */
+
+/* POPUP START */
+
+#popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  transform-origin: right;
+}
+
+#arnfinn1 #popup-head{
+      animation: pop 1s 0s forwards;
+}
+
+#head-link{
+  height: 220px;
+  width: 135px;
+  right: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+}
+
+#head-link:hover{
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+.popup-speech-buble{
+  width: 220px;
+  height: 145px;
+  padding: 15px;
+  top: 25px;
+  right: 200px;
+  opacity: 0;
+  transform-origin: bottom right;
+}
+
+.snakkeboble{
+  background-color: #fafafa;
+  border-radius: 10%;
+  opacity: 1;
+  transform: scale(1);
+  animation: pop 1s 0s forwards;
+}
+
+#arnfinn1 #popup-speech-bubble1{
+    animation: pop-in-long 5s 0.1s forwards;
+}
+
+.bubble-pointer-popup{
+  width: 60px;
+  top: 85%;
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+.popup-tekst{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 18px;
+  text-align: right;
+  right: 10px;
+  position: relative !important;
+}
+/* POPUP END */
+
+
+/* KLAR TARGET */
+#klar:target ~ #head-link, #klar:target ~ #popup-speech-bubble1, #klar:target ~ #karakter #shine, klar:target ~ #popup-speech-bubble2{
+    display: block;
+}
+/* KLAR TARGET STOP */
+
+
+/* ANIMATIONS START */
+@keyframes pop{
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1.0);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  20% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  40% {
+    transform: scale3d(.91, .91, .91);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop-in-out{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+}
+
+@keyframes pop-in-long{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* ANIMATIONS END */
+
+
+#anim2:target ~ #anim-container{
+    display: none;
+}
+#anim2:target ~ #anim-container2{
+    display: block;
+}
+
+/* ARNFINN ENDS */
+#anim-container *, #anim-container2 *{
+  position: absolute !important;
+}
+
+#arnfinn1, #arnfinn2, #arnfinn3{
+  top: 0;
+  right: 0;
+}

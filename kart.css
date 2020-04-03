@@ -1,0 +1,834 @@
+/* SITE START */
+body, html {
+  max-width: 100%;
+    /*background: #ccac89;*/
+}
+*{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+}
+
+#container {
+  height: 900;
+  width: 1440;
+  overflow: hidden;
+  position: relative;
+    margin: auto;
+}
+
+#map{
+  position: absolute;
+}
+/* SITE END */
+
+
+/* BIG BUTTONS START */
+.big-btn{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  padding: 15px;
+  border: 4px solid #EAEBED;
+}
+
+.big-btn-ripple{
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 4px solid rgba(234, 235, 237, .0);
+}
+
+.big-btn-ripple:hover{
+  animation: ripple .7s linear;
+  animation-fill-mode: forwards;
+}
+
+.inner-big-btn{
+  height: 100%;
+  width: 100%;
+  background-color: #EAEBED;
+  border-radius: 50%;
+}
+
+/*** BIG BUTTONS SPECIFIC START ***/
+/*** TITANIC START ***/
+#titanic-btn{
+  left: 430px;
+  top: 230px;
+  position: absolute;
+  z-index: 2;
+}
+
+#titanic-btn:hover ~ #titanic-info{
+    opacity: 1;
+    top: 170px;
+}
+
+#titanic-info{
+  position: absolute;
+  top: 180px;
+  left: 430px;
+  color: #EAEBED;
+  font-size: 22px;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+/*** HOVER EFFECT START ***/
+#floatingtitanic{
+    position: absolute;
+    width: 30px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#titanic-transform{
+  left: 490px;
+  top: 250px;
+}
+
+#iceberg{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 510px;
+  top: 220px;
+  opacity: 0;
+}
+
+#titanic-btn:hover  ~ #titanic-transform #floatingtitanic{
+    opacity: 1;
+    animation: pop-in-long 2s forwards;
+}
+
+#titanic-btn:hover ~ #titanic-transform{
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+#titanic-btn:hover  ~ #iceberg{
+    opacity: 1;
+    animation: floating 2s infinite;
+}
+/*** HOVER EFFECT END ***/
+/*** TITANIC END ***/
+
+/*** KRISTNING AV NORGE START ***/
+#kristning-btn{
+  left:640px;
+  top: 160px;
+  position: absolute;
+}
+
+#kristning-btn:hover ~#kristning-info{
+    opacity: 1;
+    top: 100px;
+}
+
+#kristning-info{
+  position: absolute;
+  top: 110px;
+  left: 640px;
+  color: #EAEBED;
+  font-size: 22px;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+/*** HOVER EFFECT EFFECT ***/
+#blades{
+  position: absolute;
+  top: 35px;
+  left: 670px;
+}
+
+#blades img{
+  width: 60px;
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.3s linear 0.3s, left 0.3s ease 0.1s, right 0.3s ease 0.1s;
+}
+
+#kristning-btn:hover ~ #blades > #sword1{
+  transform: rotate(90deg);
+  left: -25px;
+  opacity: 1;
+}
+
+#kristning-btn:hover ~ #blades > #sword2{
+  transform: rotate(0deg);
+  right: -25px;
+  opacity: 1;
+}
+
+#sword1{
+  transform: rotate(135deg);
+  left: -100px;
+}
+
+#sword2{
+  transform: rotate(-45deg);
+  right: -100px;
+}
+/*** HOVER EFFECT END ***/
+/*** KRISTNING AV NORGE END ***/
+
+/*** COLUMBUS START ***/
+#columbus-btn{
+  left:550px;
+  top: 270px;
+  position: absolute;
+  z-index: 1;
+}
+
+#columbus-btn:hover ~#columbus-info{
+    opacity: 1;
+    top: 210px;
+}
+
+#columbus-btn:hover ~ #motor-boat-prediction, #columbus-btn:hover ~ #telephone-prediction{
+  opacity: 0;
+  transition: all 0.5s 0s;
+}
+
+#columbus-info{
+  position: absolute;
+  top: 220px;
+  left: 550px;
+  color: #EAEBED;
+  font-size: 22px;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+/*** HOVER EFFECT START ***/
+#columbus-btn:hover ~ #columbusrute .rutesteg{
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#columbusrute{
+  position: absolute;
+  left: 280px;
+  top: 350px;
+  width: 315px;
+  height: 80px;
+  transform: rotate(-18deg);
+}
+
+.rutesteg{
+  width: 10px;
+  height: 5px;
+  background: #EAEBED;
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(1) {
+  transition-delay: 0.3s;
+  right: 25px;
+  top:-10px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(2) {
+  transition-delay: 0.6s;
+    top: -5px;
+  right: 50px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(3) {
+  transition-delay: 0.9s;
+  right: 75px;
+    top:5px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(4) {
+  transition-delay: 1.2s;
+  right: 100px;
+    top: 10px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(5) {
+  transition-delay: 1.5s;
+  right: 125px;
+    top: 13px
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(6) {
+  transition-delay: 1.8s;
+  right: 150px;
+    top: 8px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(7) {
+  transition-delay: 2.1s;
+  right: 175px;
+    top: 4px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(8) {
+  transition-delay: 2.4s;
+  right: 200px;
+    top: 0px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(9) {
+  transition-delay: 2.7s;
+  right: 225px;
+    top: -4px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(10) {
+  transition-delay: 3s;
+  right: 250px;
+    top: -6px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(11) {
+  transition-delay: 3.3s;
+  right: 275px;
+    top:-2px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(12) {
+  transition-delay: 3.6s;
+  right: 300px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(13) {
+  transition-delay: 3.9s;
+  right: 325px;
+}
+
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(14) {
+  transition-delay: 4.2s;
+  right: 350px;
+}
+#columbus-btn:hover ~ #columbusrute .rutesteg:nth-child(15) {
+  transition-delay: 4.5s;
+  right: 375px;
+}
+/*** HOVER EFFECT END ***/
+/*** COLUMBUS END ***/
+
+
+/*** TROJA START ***/
+#troja-btn{
+  left:700px;
+  top: 290px;
+  position: absolute;
+  z-index: 2;
+}
+
+#troja-btn:hover ~#troja-info{
+    opacity: 1;
+    top: 220px;
+}
+
+#troja-info{
+  position: absolute;
+  top: 230px;
+  left: 705px;
+  color: #EAEBED;
+  font-size: 22px;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+/*** HOVER EFFECT START ***/
+#troja-btn:hover ~ #trojan-horse-sml{
+  animation: pop-in-long 5s 0s;
+}
+
+#troja-btn:hover ~ #trojan-horse-guy1{
+  animation: pop-in-long 5s 0.1s;
+}
+
+#troja-btn:hover ~ #trojan-horse-guy2{
+  animation: pop-in-long 5s 0.2s;
+}
+
+.trojan-horse-guys{
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+  top: 300px;
+}
+
+#trojan-horse-guy1{
+  left: 780px;
+}
+
+#trojan-horse-guy2{
+  left: 750px;
+}
+
+#trojan-horse-sml{
+  height: 75px;
+  width: 75px;
+  top: 275px;
+  left: 750px;
+  position: absolute;
+  opacity: 0;
+}
+/*** HOVER EFFECT END ***/
+/*** TROJA END ***/
+/*** BIG BUTTONS SPECIFIC END ***/
+/*** BIG BUTTONS END ***/
+
+/*** SMALL BUTTON START ***/
+.sml-btn{
+  position: absolute;
+  background: #EAEBED;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.top .sml-btn-content{
+  left: -200px;
+  top: -280px;
+}
+
+.top .border-arrow{
+  bottom: -15px;
+  left: 194;
+  border-width: 15px 15px 0;
+}
+
+.bottom .sml-btn-content{
+  left: -200px;
+  top: 37px;
+}
+
+.bottom .border-arrow{
+  top: -15px;
+  left: 194px;
+  border-width: 0px 15px 15px;
+}
+
+.sml-btn-content{
+  display: none;
+  color: #13293D;
+  font-size: 28px;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  border: 4px solid #13293D;
+  padding: 20px;
+  border-radius: 15px;
+  background: #EAEBED;
+  position: absolute;
+  transition: opacity 0s, height 0s, width 0s;
+  transition-delay: .5s;
+}
+
+.border-arrow{
+  position: absolute;
+  border-style: solid;
+  border-color: #13293D transparent;
+  display: block;
+  width: 0;
+}
+
+.sml-btn:hover > .sml-btn-content{
+  opacity: 1;
+  transition-delay: 0s;
+  width: 400px;
+  height: 220px;
+  display:block;
+  z-index: 2;
+}
+
+.sml-btn:hover{
+  cursor: crosshair;
+}
+
+/*** SMALL BUTTONS SPECIFIC START ***/
+#rocket-prediction{
+  left: 280px;
+  top: 290px;
+}
+#computer-prediction{
+  left: 260px;
+  top: 310px;
+}
+#telephone-prediction{
+  left: 590px;
+  top: 230px;
+}
+#motor-boat-prediction{
+  left: 600px;
+  top: 260px;
+}
+#gold-prediction{
+  left: 210px;
+  top: 280px;
+}
+/*** SMALL BUTTONS SPECIFIC END ***/
+/*** SMALL BUTTONS END ***/
+
+
+
+/*** MAP HOVER ANIMATIONS START ***/
+.hover-micro-animations{
+  position: absolute;
+}
+/*** TREES START ***/
+#monkey{
+  height: 50px;
+  top: 530px;
+  left: 340px;
+  opacity: 0;
+}
+
+#tree-front{
+  height: 80px;
+  top: 500px;
+  left: 300px;
+  z-index: 2;
+}
+
+#tree-back{
+  height: 80px;
+  top: 500px;
+  left: 300px;
+}
+
+#tree-front:hover ~ #monkey{
+  opacity: 1;
+  transform: rotate(5deg);
+  left: 350px;
+  transition: all 0.5s 0.5s;
+}
+
+#tree-front:hover{
+  animation: hover-wiggle 2s 0s;
+}
+/*** TREES END ***/
+/*** IGLOO START ***/
+#igloo{
+  height: 50px;
+  left: 455px;
+  top: 115px;
+  z-index: 2;
+}
+
+#igloo:hover ~ #snow1,
+#igloo:hover ~ #snow2,
+#igloo:hover ~ #snow3,
+#igloo:hover ~ #snow4{
+  display: block;
+}
+
+
+#snow1:hover,
+#snow1:hover ~ #snow2,
+#snow1:hover ~ #snow3,
+#snow1:hover ~ #snow4{
+  display: block;
+}
+
+.snow{
+  height: 50px;
+  top: 90px;
+  left: 440px;
+  opacity: 0;
+}
+#snow1{
+  top: 95px;
+  left: 440px;
+  animation: falling-snow1 7s 0s ease-in-out infinite;
+  display: none;
+  z-index: 2;
+}
+#snow2{
+  top: 95px;
+  left: 450px;
+  animation: falling-snow2 7s 1.2s ease-in-out infinite;
+  display: none;
+}
+#snow3{
+  top: 95px;
+  left: 460px;
+  animation: falling-snow3 7s 2.4s ease-in-out infinite;
+  display: none;
+}
+#snow4{
+  top: 80px;
+  left: 455px;
+  animation: falling-snow4 7s 3.7s ease-in-out infinite;
+  display: none;
+}
+/*** IGLOO END ***/
+/*** CHINESE START ***/
+#chinese{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 300px;
+  left: 980px;
+}
+
+#chinese-building1:hover ~ #chinese-building2{
+  animation: pop-in-out 5s 0.1s forwards;
+}
+
+#chinese-building1:hover ~ #chinese-building3{
+  animation: pop-in-out 5s 0.3s forwards;
+}
+
+#chinese-building1{
+  position: absolute;
+  left: 0px;
+}
+
+#chinese-building2{
+  position: absolute;
+  left: -70px;
+  height: 100px;
+  top: -20px;
+  opacity: 0;
+}
+
+#chinese-building3{
+  position: absolute;
+  left: 20px;
+  top: -60px;
+  height: 50px;
+  opacity: 0;
+}
+/*** CHINESE END ***/
+/*** MAP HOVER ANIMATIONS END ***/
+
+
+/*** CONSTANT ANIMATIONS START ***/
+/*** SHARK START ***/
+#shark-fin{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  bottom: 170px;
+  left: 300px;
+  transform: scaleX(-1);
+  animation: shark-move 20s 0s infinite;
+}
+/*** SHARK END ***/
+/*** CONSTANT ANIMATIONS END ***/
+
+
+
+
+/*** POPUP START ***/
+#popup-head{
+  position: absolute;
+}
+
+#head-link{
+  position: absolute;
+}
+
+.popup-speech-buble{
+  position: absolute;
+}
+
+#map-popup-speech-bubble1,
+#kristning-popup-speech-bubble,
+#columbus-popup-speech-bubble,
+#troja-popup-speech-bubble,
+#titanic-popup-speech-bubble{
+    animation: pop-in-out 7s 0.1s forwards;
+}
+
+#map-popup-speech-bubble2{
+    animation: pop-in-long 7s 7.2s forwards;
+}
+
+.bubble-pointer-popup{
+  position: absolute;
+}
+
+.snakkeboble{
+  position: absolute;
+}
+
+
+#map-popup-speech-bubble1,
+#map-popup-speech-bubble2,
+#head-link,
+#kristning-popup-speech-bubble,
+#columbus-popup-speech-bubble,
+#troja-popup-speech-bubble,
+#titanic-popup-speech-bubble{
+    display: none;
+}
+
+#start:target ~ #head-link,
+#start:target ~ #map-popup-speech-bubble1,
+#start:target ~ #map-popup-speech-bubble2,
+#kristning-return:target ~ #kristning-popup-speech-bubble,
+#kristning-return:target ~ #head-link,
+#columbus-return:target ~ #columbus-popup-speech-bubble,
+#columbus-return:target ~ #head-link,
+#troja-return:target ~ #troja-popup-speech-bubble,
+#troja-return:target ~ #head-link,
+#titanic-return:target ~ #titanic-popup-speech-bubble,
+#titanic-return:target ~ #head-link{
+    display: block;
+}
+/*** POPUP END ***/
+
+
+
+
+/*** KEYFRAMES START ***/
+@keyframes floating{
+    0%{
+        top: 230px;
+    }
+    50%{
+        top: 235px;
+    }
+    100%{
+        top: 230px;
+    }
+}
+
+@keyframes ripple {
+  0% {
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+    border: 4px solid rgba(234, 235, 237, 1.0);
+  }
+
+  50% {
+    left: -10px;
+    top: -10px;
+    padding: 10px;
+    border: 4px solid rgba(234, 235, 237, .5);
+  }
+
+  100% {
+    left: -20px;
+    top: -20px;
+    padding: 20px;
+    border: 4px solid rgba(234, 235, 237, .0);
+  }
+}
+
+@keyframes falling-snow1 {
+  0%{
+    opacity: 0;
+    top: 90px;
+    left: 440px;
+  }
+  25%{
+    opacity: 1;
+    left: 445px;
+  }
+  50%{
+    left: 440px;
+  }
+  75%{
+    left: 445px;
+  }
+  100%{
+    opacity: 0;
+    top: 105px;
+    left: 440px;
+  }
+}
+@keyframes falling-snow2 {
+  0%{
+    opacity: 0;
+    top: 90px;
+    left: 455px;
+  }
+  25%{
+    opacity: 1;
+    left: 450px;
+  }
+  50%{
+    left: 455px;
+  }
+  75%{
+    left: 450px;
+  }
+  100%{
+    opacity: 0;
+    top: 105px;
+    left: 455px;
+  }
+}
+@keyframes falling-snow3 {
+  0%{
+    opacity: 0;
+    top: 85px;
+    left: 450px;
+  }
+  25%{
+    opacity: 1;
+    left: 445px;
+  }
+  50%{
+    left: 450px;
+  }
+  75%{
+    left: 445px;
+  }
+  100%{
+    opacity: 0;
+    top: 100px;
+    left: 450px;
+  }
+}
+
+@keyframes falling-snow4 {
+  0%{
+    opacity: 0;
+    top: 80px;
+    left: 455px;
+  }
+  25%{
+    opacity: 1;
+    left: 460px;
+  }
+  50%{
+    left: 455px;
+  }
+  75%{
+    left: 460px;
+  }
+  100%{
+    opacity: 0;
+    top: 95px;
+    left: 455px;
+  }
+}
+
+@keyframes shark-move {
+  0%{
+    left: 500px;
+    transform: scaleX(-1);
+  }
+  45%{
+    left: 680px;
+    transform: scaleX(-1);
+  }
+  50%{
+    left: 700px;
+    transform: scaleX(1);
+  }
+  95%{
+    left: 520px;
+    transform: scaleX(1);
+  }
+  100%{
+    left: 500px;
+    transform: scaleX(-1);
+  }
+}
+/*** KEYFRAMES END ***/

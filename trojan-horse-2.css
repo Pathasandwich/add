@@ -1,0 +1,1005 @@
+html, body {
+  margin: auto;
+}
+
+#anim-container1 {
+  width: 1520px;
+  height: 940px;
+  margin: auto;
+  position: relative;
+}
+
+#castle {
+  width: 1550px;
+  height: 1000px;
+  position: fixed;
+}
+
+#castle1 {
+  height: 280px;
+  /*width: 124px;*/
+  position: fixed;
+  bottom: 170px;
+  left: 442px;
+  z-index: 5;
+}
+
+/*** trojanere ***/
+
+#man1 {
+  width: 90px;
+  position: fixed;
+  bottom: 380px;
+  left: 760px;
+  transform: scaleX(-1);
+  z-index: -1;
+  animation: manfade 38.5s;
+}
+
+#man2 {
+  width: 100px;
+  position: fixed;
+  bottom: 250px;
+  left: 730px;
+  animation: man2Moves 25s linear;
+  z-index: -1;
+}
+
+#manspiser {
+  width: 70px;
+  position: fixed;
+  bottom: 380px;
+  left: 710px;
+  z-index: -1;
+  animation: manfade 38.5s;
+}
+
+#man3 {
+  width: 34px;
+  position: fixed;
+  bottom: 250px;
+  left: 900px;
+  animation: man3Moves 25s linear;
+  z-index: -1;
+}
+
+/*** trojanere slutt ***/
+
+/*** Pynt ***/
+
+#rock1 {
+  width: 450px;
+  position: fixed;
+  bottom: -50px;
+  left: 350px;
+}
+
+#rock1link {
+  width: 100px;
+  position: absolute;
+  top: 0px;
+  left: 350px;
+  display: block;
+  z-index: 1000;
+}
+
+#tree1 {
+  width: 650px;
+  position: fixed;
+  bottom: -50px;
+  left: 350px;
+  z-index: 5
+}
+
+#rock2 {
+  width: 800px;
+  position: fixed;
+  bottom: 400px;
+  left: -280px;
+}
+
+#plant {
+  width: 200px;
+  position: fixed;
+  bottom: 560px;
+  left: 150px;
+}
+
+#tree2 {
+  width: 550px;
+  position: fixed;
+  bottom: 360px;
+  left: 310px;
+}
+
+/*** Pynt slutt ***/
+
+#horse {
+  width: 200px;
+  position: fixed;
+  bottom: 230px;
+  left: 560px;
+  animation: horsemoves 15s linear;
+  z-index: 3;
+}
+
+/*** Speech ***/
+
+#hurra {
+  width: 50px;
+  bottom: 320px;
+  left: 780px;
+  background-color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  position: fixed;
+  z-index: -1;
+  animation: hurra 33s;
+}
+
+#hurra2 {
+  width: 150px;
+  bottom: 430px;
+  left: 660px;
+  background-color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  position: fixed;
+  z-index: -1;
+  animation: hurra2 34s;
+}
+
+/*** Speech Slutt ***/
+
+#anim-container2 {
+  width: 1520px;
+  height: 940px;
+  margin: auto;
+  position: relative;
+  display: none;
+}
+
+#anim2:target~#anim-container2 {
+  display: block;
+}
+
+#anim2:target~#anim-container1 {
+  display: none;
+}
+
+#horse2 {
+  width: 200px;
+  position: fixed;
+  bottom: 230px;
+  left: 560px;
+  z-index: 3;
+}
+
+/*** Grekerne ***/
+
+#kriger1 {
+  width: 45px;
+  position: fixed;
+  bottom: 260px;
+  left: 540px;
+  transform: scaleX(1);
+  z-index: -1;
+  animation: kriger1moves 2s linear forwards;
+  animation-delay: 1s;
+}
+
+#kriger2 {
+  width: 45px;
+  position: fixed;
+  bottom: 270px;
+  left: 710px;
+  transform: scaleX(-1);
+  z-index: -1;
+  animation: kriger2moves 2s linear forwards;
+  animation-delay: 1s;
+}
+
+#kriger100 {
+  width: 60px;
+  position: fixed;
+  bottom: 350px;
+  left: 770px;
+  z-index: -1;
+  animation: kriger100moves 18s linear forwards;
+  animation-delay: 4s;
+}
+
+#kriger101 {
+  width: 60px;
+  position: fixed;
+  bottom: 270px;
+  left: 750px;
+  z-index: -1;
+  animation: kriger101moves 20s linear forwards;
+  animation-delay: 4.2s;
+}
+
+#kriger102 {
+  width: 60px;
+  position: fixed;
+  bottom: 150px;
+  left: 800px;
+  z-index: -1;
+  animation: kriger102moves 20s linear forwards;
+  animation-delay: 4s;
+}
+
+#krigerhest {
+  width: 120px;
+  position: fixed;
+  bottom: 250px;
+  left: 800px;
+  z-index: -1;
+  animation: krigerhestmoves 20s linear forwards;
+  animation-delay: 4s;
+}
+
+/*** trojanere slutt ***/
+
+/*** Flammer ***/
+
+#fire {
+  position: fixed;
+  width: 20px;
+  bottom: 250px;
+  left: 810px;
+  transform: scale(2.0, 2);
+  border-radius: 80%;
+  animation: firefade 13.4s;
+}
+
+.flame {
+  width: 0px;
+  height: 0px;
+  background-color: darkorange;
+  bottom: 0px;
+  transform: rotate(45deg);
+  margin-bottom: 70px;
+  position: absolute;
+  border-radius: 30%;
+}
+
+.flame:nth-child(1) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0;
+}
+
+.flame:nth-child(2) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+}
+
+.flame:nth-child(3) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+
+.flame:nth-child(4) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+}
+
+.flame:nth-child(5) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
+#fire2 {
+  position: fixed;
+  width: 20px;
+  bottom: 250px;
+  left: 1175px;
+  transform: scale(2.0, 2);
+  border-radius: 80%;
+  animation: firefade 13.5s;
+}
+
+.flame2 {
+  width: 0px;
+  height: 0px;
+  background-color: darkorange;
+  bottom: 0px;
+  transform: rotate(45deg);
+  margin-bottom: 70px;
+  position: absolute;
+  border-radius: 30%;
+}
+
+.flame2:nth-child(1) {
+  animation: fire 2.6s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0;
+}
+
+.flame2:nth-child(2) {
+  animation: fire 2.5s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+}
+
+.flame2:nth-child(3) {
+  animation: fire 2.2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+}
+
+.flame2:nth-child(4) {
+  animation: fire 2.2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+}
+
+.flame2:nth-child(5) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
+#fire3 {
+  position: fixed;
+  width: 2px;
+  bottom: 180px;
+  left: 995px;
+  transform: scale(2.0, 2);
+  border-radius: 80%;
+  animation: firefade 13.8s;
+}
+
+.flame3 {
+  width: 0px;
+  height: 0px;
+  background-color: darkorange;
+  bottom: 0px;
+  transform: rotate(45deg);
+  margin-bottom: 70px;
+  position: absolute;
+  border-radius: 30%;
+}
+
+.flame3:nth-child(1) {
+  animation: fire 2.4s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0;
+}
+
+.flame3:nth-child(2) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.6s;
+}
+
+.flame3:nth-child(3) {
+  animation: fire 2s infinite;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
+.flame3:nth-child(4) {
+  animation: fire 2.4s infinite;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+}
+
+.flame3:nth-child(5) {
+  animation: fire 2.4s infinite;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+}
+
+/*** Flammer slutt ***/
+
+@keyframes horsemoves {
+  0% {
+    left: 130px;
+    z-index: 3;
+  }
+  40% {
+    bottom: 230px;
+    left: 560px;
+    ;
+  }
+}
+
+/*** Keyframe snakkebobble ***/
+
+@keyframes hurra {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    z-index: 1;
+  }
+  46% {
+    z-index: -1;
+  }
+}
+
+@keyframes hurra2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    z-index: 1;
+  }
+  46% {
+    z-index: -1;
+  }
+}
+
+/*** Keyframe snakkebobble Slutt ***/
+
+/*** Keyframe Trojanere ***/
+
+@keyframes manfade {
+  0% {
+    z-index: 2;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
+@keyframes man2Moves {
+  0% {
+    z-index: 2;
+    left: 300px;
+  }
+  25% {
+    left: 730px;
+  }
+  60% {
+    left: 730px;
+    transform: scaleX(1)
+  }
+  61% {
+    transform: scaleX(-1)
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    transform: scaleX(-1)
+  }
+  90% {
+    left: 900px;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+
+@keyframes man3Moves {
+  0% {
+    left: 50px;
+    transform: scaleX(-1);
+    z-index: 3;
+  }
+  40% {
+    left: 820px;
+  }
+  40% {
+    transform: scaleX(-1)
+  }
+  41% {
+    transform: scaleX(1)
+  }
+  60% {
+    left: 820px;
+    transform: scaleX(1)
+  }
+  61% {
+    transform: scaleX(-1)
+  }
+  80% {
+    left: 900px;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    transform: scaleX(-1)
+  }
+  100% {
+    z-index: -1;
+  }
+}
+
+/*** Keyframe Trojanere Slutt ***/
+
+/*** Keyframe Flammer ***/
+
+@keyframes firefade {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fire {
+  0% {
+    width: 0;
+    height: 0;
+    margin-left: 50px;
+    background-color: #ffce00;
+    z-index: 1000;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 75px;
+    margin-left: 25px;
+    background-color: darkorange;
+  }
+  75% {
+    z-index: 1;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    margin-bottom: 200px;
+    margin-left: 50px;
+    background-color: #ff0000;
+    z-index: 1;
+  }
+}
+
+/*** Keyframe Flammer Slutt ***/
+
+/*** Keyframe Grekerne ***/
+
+@keyframes kriger100moves {
+  0% {
+    bottom: 200px;
+    left: -200px;
+  }
+  0% {
+    z-index: 1
+  }
+  5% {
+    opacity: 1
+  }
+  33% {
+    left: 770px;
+    bottom: 350px;
+  }
+  66% {
+    z-index: 1;
+    left: 770px;
+  }
+  66% {
+    opacity: 1;
+  }
+  66% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes kriger101moves {
+  0% {
+    bottom: 200px;
+    left: -200px;
+  }
+  0% {
+    z-index: 2
+  }
+  5% {
+    opacity: 1
+  }
+  20% {
+    bottom: 310;
+  }
+  33% {
+    left: 750px;
+    bottom: 270px;
+  }
+  66% {
+    z-index: 2;
+    left: 750px;
+  }
+  66% {
+    opacity: 1;
+  }
+  66% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+  }
+}
+
+@keyframes kriger102moves {
+  0% {
+    bottom: 370px;
+    left: -200px;
+  }
+  0% {
+    z-index: 3;
+  }
+  5% {
+    opacity: 1;
+  }
+  33% {
+    left: 800px;
+    bottom: 150px;
+  }
+  66% {
+    z-index: 3;
+    left: 800px;
+  }
+  100% {
+    z-index: 3;
+  }
+}
+
+@keyframes krigerhestmoves {
+  0% {
+    bottom: 200px;
+    left: -100px;
+  }
+  0% {
+    z-index: 1;
+  }
+  5% {
+    opacity: 1;
+  }
+  33% {
+    left: 800px;
+    bottom: 250px;
+  }
+  66% {
+    z-index: 1;
+    left: 800px;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes kriger1moves {
+  0% {
+    bottom: 300px;
+    left: 640px;
+    z-index: 1;
+  }
+  33% {
+    left: 600px;
+    bottom: 260px;
+  }
+  66% {
+    z-index: 1;
+    left: 600
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes kriger2moves {
+  0% {
+    bottom: 300px;
+    left: 650px;
+    z-index: 1;
+  }
+  33% {
+    left: 710px;
+    bottom: 270px;
+  }
+  66% {
+    z-index: 1;
+    left: 810
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+/*** Keyframe Grekerne Slutt ***/
+
+/*** Arnfinn Start ***/
+
+#popup-speech-bubble2, #popup-speech-bubble2, #head-link2 {
+  transition: z-index 0s linear;
+  transition-delay: 18s;
+}
+
+#anim1:target~#anim-container1 #popup-speech-bubble2, #anim1:target~#anim-container1 #popup-speech-bubble2 *, #anim1:target~#anim-container1 #head-link2 {
+  z-index: 1000;
+}
+
+#popup-speech-bubble1, #head-link, #popup-speech-bubble1 *, #head-link * {
+  z-index: 1000;
+  position: fixed;
+}
+
+#popup-speech-bubble2, #head-link2, #popup-speech-bubble2 *, #head-link2 * {
+  z-index: -1;
+  position: fixed;
+}
+
+.snakkeboble {
+  background-color: #fafafa;
+  border-radius: 10%;
+  opacity: 1;
+  transform: scale(1);
+  animation: pop 1s 0s forwards;
+}
+
+#head-link2, #popup-speech-bubble2 {
+  z-index: -1;
+}
+
+#popup-speech-bubble2 p{
+  top: -15px;
+}
+
+/*** POPUP START ***/
+
+#popup-head {
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  animation: pop 1s 0s forwards;
+  transform-origin: right;
+  position: fixed;
+}
+
+#head-link, #head-link2 {
+  height: 220px;
+  width: 135px;
+  right: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+  position: fixed;
+}
+
+#head-link:hover {
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+.popup-speech-buble {
+  width: 220px;
+  height: 145px;
+  padding: 15px;
+  top: 25px;
+  right: 200px;
+  opacity: 0;
+  transform-origin: bottom right;
+  position: fixed;
+}
+
+#popup-speech-bubble1, #popup-speech-bubble2, {
+  animation: pop-in-long 5s 0.1s forwards;
+}
+
+.bubble-pointer-popup {
+  width: 60px;
+  top: 85%;
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+.popup-tekst {
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 18px;
+  text-align: right;
+  position: relative !important;
+}
+
+/*** POPUP END ***/
+
+/*** THE END ***/
+
+#popup-speech-bubble1, #shine, #head-link, #klar:target~#anim-container1 #intro-speech-buble {
+  display: none;
+}
+
+#klar:target~#anim-container1 #head-link, #klar:target~#anim-container1 #popup-speech-bubble1, #klar:target~#anim-container1 #anim-container1 #karakter #shine, #anim-container1 klar:target~#anim-container1 #popup-speech-bubble2 {
+  display: block;
+}
+
+/*** THE END ***/
+
+/*** ANIMATIONS START ***/
+
+@keyframes pop {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1.0);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  20% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  40% {
+    transform: scale3d(.91, .91, .91);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop-in-out {
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+}
+
+@keyframes pop-in-long {
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#anim1:not(:target) {}
+
+#klar:target~#anim-container1 * {
+  animation-play-state: paused;
+}
+
+#klar:target~#anim-container1 #head-link *, #klar:target~#anim-container1 #head-link, #klar:target~#anim-container1 #popup-speech-bubble1 *, #klar:target~#anim-container1 #popup-speech-bubble1 {
+  animation-play-state: running !important;
+}
+
+#anim1:target~#anim-container1 #head-link2 *, #anim1:target~#anim-container1 #head-link2, #anim1:target~#anim-container1 #popup-speech-bubble2 *, #anim1:target~#anim-container1 #popup-speech-bubble2 {
+  animation-play-state: running !important;
+}
+
+/*** Arnfinn Slutt ***/
+
+/*** ANIMATIONS END ***/
+
+@keyframes synlig {
+  0% {
+    z-index: -1;
+  }
+  100% {
+    z-index: 1000;
+  }
+}
+
+#arnfinn3 {
+  top: 0;
+  right: 0;
+}
+
+#arnfinn3 #head-link, #arnfinn3 #popup-speech-bubble {
+  display: none;
+}
+
+#anim2:target~#anim-container2 #arnfinn3 #head-link, #anim2:target~#anim-container2 #arnfinn3 #popup-speech-bubble {
+  display: block !important;
+}
+
+#arnfinn3 #popup-speech-bubble img {
+  position: absolute;
+}
+
+#arnfinn3 * {
+  z-index: -1;
+}
+
+#anim2:target~#anim-container2 #arnfinn3 * {
+  animation: synlig 1s infinite 14s;
+}
+
+#anim2:target~#anim-container2 #arnfinn3 #popup-speech-bubble {
+  opacity: 1;
+  animation: synlig, pop-in-long;
+  animation-duration: 1s, 5s;
+  animation-iteration-count: 1, 1;
+  animation-delay: 14s, 14s;
+  animation-fill-mode: forwards, forwards;
+}
+
+#anim2:target~#anim-container2 #arnfinn3 #head-link {
+  opacity: 1;
+  animation: synlig, pop;
+  animation-duration: 1s, 1s;
+  animation-iteration-count: 1, 1;
+  animation-delay: 14s, 14s;
+  animation-fill-mode: forwards, forwards;
+}
+
+* {
+  position: absolute !important;
+}

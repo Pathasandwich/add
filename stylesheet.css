@@ -1,0 +1,437 @@
+/*** KONTAINER START ***/
+#kontainer{
+    position: relative;
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+    background-color: #D8CDBA;
+    margin: auto;
+    background-image: linear-gradient(45deg, #D8CDBA, #CCAC89);
+}
+
+#kontainer *{
+    position: absolute;
+}
+/*** KONTAINER END ***/
+
+
+/*** SITE START ***/
+a{
+  text-decoration: none;
+  color: black;
+}
+p{
+  margin: 0px;
+}
+.klikk-her{
+  height: 75px;
+  width: 75px;
+  transform: scale(1);
+  opacity: 0;
+  background-color: white;
+  border-radius: 100%;
+}
+.fixlink{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+/*** SITE END ***/
+
+/*** SNAKKEBOBLE START ***/
+.snakkeboble{
+  background-color: #fafafa;
+  border-radius: 10%;
+  opacity: 1;
+  transform: scale(1);
+  animation: pop 1s 0s forwards;
+}
+
+.snakkeboble-tekst{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 32px;
+  display: inline-block;
+  z-index: -1;
+  height: 250px;
+  width: 400px;
+  opacity: 0;
+}
+
+#intro-speech-buble{
+  width: 400px;
+  height: 250px;
+  padding: 20px;
+  top: 250px;
+  left: 750px;
+  transform-origin: bottom left;
+}
+
+#snakkeboble-klikk{
+  top: 120px;
+  left: 165px;
+  background-color: black;
+  opacity: 0;
+  animation: click-here 10s 7s infinite ease-in-out;
+  display: block;
+}
+
+#tekst3:target ~ #snakkeboble-klikk,
+#tekst4:target ~ #snakkeboble-klikk,
+#tekst5:target ~ #snakkeboble-klikk,
+#tekst6:target ~ #snakkeboble-klikk,
+#klar:target ~ #intro-speech-buble #snakkeboble-klikk{
+  display: none;
+}
+
+#bubble-pointer-intro{
+  height: 100px;
+  top: 94%;
+  left: 25px;
+}
+/*** SNAKKEBOBLE END ***/
+
+/*** TEKST START ***/
+#tekst1{
+  z-index: 1;
+  animation: tekst-fade-in-out 4s 0s ease-in-out forwards;
+}
+#tekst2{
+  z-index: 1;
+  animation: tekst-fade-in 4s 4s ease-in-out forwards;
+}
+#tekst3:target, #tekst4:target, #tekst5:target, #tekst6:target{
+  z-index: 1;
+  animation: tekst-fade-in 4s 0s ease-in-out forwards;
+}
+
+#tekst3:target ~ #tekst1, #tekst4:target ~ #tekst1, #tekst5:target ~ #tekst1, #tekst6:target ~ #tekst1, #klar:target ~ #tekst1,
+#tekst3:target ~ #tekst2, #tekst4:target ~ #tekst2, #tekst5:target ~ #tekst2, #tekst6:target ~ #tekst2, #klar:target ~ #tekst2{
+  display: none;
+}
+/*** TEKST END ***/
+
+/*** KARAKTER START ***/
+#karakter{
+  height: 600px;
+  width: 400px;
+  top: 150px;
+  left: 200px;
+  animation: karakter-inn 1.5s 0s;
+}
+#shine{
+  top: 200px;
+  transform: scale(1.5);
+  opacity: 0.75;
+  animation: shine-rotate 40s 0s infinite linear;
+}
+#shine-fade{
+  height: 200px;
+  width: 200px;
+  transform: scale(2);
+  right: 110px;
+  top: -100px;
+}
+
+#kart{
+  height: 300px;
+  margin: auto;
+  top: 220px;
+  z-index: 1;
+}
+
+#kart:hover{
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+#kart-klikk{
+  top: 320px;
+  left: 160px;
+  display: block;
+  z-index: 5;
+}
+/*** KARAKTER END ***/
+
+
+
+/*** POPUP START ***/
+.bubble-pointer-popup{
+  width: 60px;
+  top: 85%;
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+.popup-tekst{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 18px;
+  text-align: right;
+  position: relative !important;
+}
+
+.popup-speech-buble{
+  width: 220px;
+  height: 145px;
+  padding: 15px;
+  top: 25px;
+  right: 200px;
+  opacity: 0;
+  transform-origin: bottom right;
+}
+
+#popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  animation: pop 1s 0s forwards;
+  transform-origin: right;
+}
+
+#head-link{
+  height: 220px;
+  width: 135px;
+  right: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+}
+
+#head-link:hover{
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+#popup-speech-bubble1{
+    animation: pop-in-long 5s 0.1s forwards;
+}
+/*** POPUP END ***/
+
+
+
+/*** THE END ***/
+#popup-speech-bubble1, #shine, #head-link, #klar:target ~ #intro-speech-buble{
+    display: none;
+}
+
+#klar:target ~ #head-link,
+#klar:target ~ #popup-speech-bubble1,
+#klar:target ~ #karakter #shine-fade,
+#klar:target ~ #karakter #shine-fade #shine,
+#klar:target ~ #popup-speech-bubble2,
+#klar:target ~ #karakter #kart-klikk{
+    display: block;
+}
+#klar:target ~ #karakter #shine-fade{
+  animation: fade-in 2s 0s forwards;
+}
+#klar:target ~ #karakter #kart-klikk{
+  animation: click-here 10s 4s infinite ease-in-out;
+}
+/*** THE END ***/
+
+
+
+/*** KEYFRAMES START ***/
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes pop{
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1.0);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  20% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  40% {
+    transform: scale3d(.91, .91, .91);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop-in-out{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+}
+
+@keyframes pop-in-long{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes karakter-inn{
+  0%{
+    left: 150px;
+    opacity: 0;
+  }
+  100%{
+    left: 200px;
+    opacity: 1;
+  }
+}
+
+@keyframes shine-rotate{
+  0%{
+    transform: scale(1.5) rotate(0deg);
+  }
+  100%{
+    transform: scale(1.5) rotate(360deg);
+  }
+}
+
+@keyframes click-here{
+  0%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  7.5%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  7.5001%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  15%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  15.0001%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  22.5%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  22.5001%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes tekst-fade-in-out{
+  0%{
+    margin-top: 10px;
+    opacity: 0;
+  }
+  15%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+  85%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+  100%{
+    margin-top: -10px;
+    opacity: 0;
+  }
+}
+
+@keyframes tekst-fade-in{
+  0%{
+    margin-top: 10px;
+    opacity: 0;
+  }
+  15%, 100%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes hover-wiggle {
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(2deg);
+  }
+  40%{
+    transform: rotate(-2deg);
+  }
+  60%{
+    transform: rotate(2deg);
+  }
+  80%{
+    transform: rotate(-2deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+/*** KEYFRAMES END ***/

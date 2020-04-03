@@ -1,0 +1,212 @@
+/*** KONTAINER START ***/
+#kontainer{
+    position: relative;
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+    background-color: #D8CDBA;
+    margin: auto;
+}
+
+#kontainer *{
+    position: absolute;
+}
+/*** KONTAINER END ***/
+
+
+
+
+
+
+
+/*** POPUP START ***/
+#popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  animation: pop 1s 0s forwards;
+  transform-origin: right;
+}
+
+#head-link{
+  height: 220px;
+  width: 135px;
+  right: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+}
+
+
+#head-link:hover{
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+.popup-speech-buble{
+  width: 200px;
+  height: 145px;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: 25px;
+  right: 200px;
+  opacity: 0;
+  transform-origin: bottom right;
+}
+
+#popup-speech-bubble1{
+    animation: pop-in-long 5s 0.1s forwards;
+}
+
+#popup-speech-bubble2{
+    animation: pop-in-long 5s 5.2s forwards;
+}
+.bubble-pointer-popup{
+  width: 60px;
+  top: 85%;
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+.snakkeboble{
+  background-color: #fafafa;
+  border-radius: 10%;
+  opacity: 1;
+  transform: scale(1);
+  animation: pop 1s 0s forwards;
+}
+
+.popup-tekst{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 18px;
+  top: -5px;
+  text-align: right;
+  right: 10px;
+}
+/*** POPUP END ***/
+
+
+/*** THE END ***/
+#popup-speech-bubble1, #shine, #head-link, #popup-speech-bubble2, #klar:target ~ #intro-speech-buble{
+    display: none;
+}
+
+#klar:target ~ #head-link, #klar:target ~ #popup-speech-bubble1, #klar:target ~ #karakter #shine, klar:target ~ #popup-speech-bubble2{
+    display: block;
+}
+/*** THE END ***/
+
+
+/*** ANIMATIONS START ***/
+@keyframes pop{
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1.0);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  20% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  40% {
+    transform: scale3d(.91, .91, .91);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop-in-out{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+}
+
+@keyframes pop-in-long{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes hover-wiggle {
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(2deg);
+  }
+  40%{
+    transform: rotate(-2deg);
+  }
+  60%{
+    transform: rotate(2deg);
+  }
+  80%{
+    transform: rotate(-2deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+/*** ANIMATIONS END ***/

@@ -1,0 +1,1337 @@
+/***
+*** @author(Andreas Græsmo & Birgitte Bø)
+***/
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #142328;
+}
+
+/********THE EXPECTED SCENARIO********/
+
+#anim-container{
+    background-color: rgb(179, 209, 255);
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    
+}
+#anim-container * {
+    position: absolute;
+}
+
+
+#sun{
+    border-radius: 50% ;
+    background: radial-gradient(circle, #F4D35E, rgba(255, 255, 230, 0), transparent); 
+    width: 250px;
+    height: 250px;
+    right: 90px;
+}
+
+#waves {
+    bottom: 0;
+    height:50px;
+    width: 100%;
+    background-color: darkblue;     
+}
+
+.waves{
+    bottom: 0;
+    height: 90px;
+    z-index: 101;
+    left: -60px;
+}
+
+/*HIDE AND DISPLAY ANIM-CONTAINER FOR ALTERNATING***/
+
+#targetbox1:target ~ #anim-container {
+    display: none;
+}
+
+#targetbox1:target ~ #anim-container-2 {
+    display: block;
+}
+
+
+
+ /*LEAVING ENGLAND*/
+
+#brygge-wrap{
+    height: 250px;
+    width:1200px;
+    bottom: 0;
+    animation: dockMoves 10s linear forwards;
+    animation-delay: 9s;
+}
+
+#ramp{
+    height: 205px;
+    bottom: 50px;
+    z-index: 102;
+    left: 450px;  
+
+}
+
+#dock{
+    background-color: rgb(107,50,8);
+    width: 1200px;
+    height: 65px;
+    bottom: 0;
+    z-index: 101;
+}
+
+@keyframes dockMoves{
+    0%{
+        left:0px;
+    }
+    99%{
+        left: -1550px;
+    }
+  
+    100%{
+        right: -1800px;
+    }
+}
+
+/*people*/
+
+.mann{
+    position: absolute;
+    height: 100px;
+    bottom: -40px;
+    z-index: 103;
+}
+
+.mann-1{
+    left: 470px;
+    bottom: 20px;
+    z-index: 105;
+    animation: mann 8s linear forwards;
+     
+}
+
+.mann-2{
+    left: 500px;
+    height: 75px;
+    bottom: 110px;
+    animation: mann 6s linear forwards;
+}
+
+.mann-3{
+    left: 470px;
+    height: 70px;
+    z-index: 104;
+    animation: mann 6s linear forwards;
+    bottom: 70px;
+}
+
+.mann-4{
+    left: 530px;
+    bottom: 170px;
+    height: 40px;
+    animation: mann 3s linear forwards;
+}
+
+@keyframes mann {
+    0%{
+        visibility: visible;
+        
+    }
+    
+    99%{
+        bottom: 235px;
+        height: 40px;
+        left:510px;
+        visibility: visible;
+    }
+  
+    100%{
+        bottom: 235px;
+        visibility: hidden;
+        height: 40px;
+        left:510px;
+    }
+}
+
+/*end mann-animation*/
+
+.dame{
+    position: absolute;
+    height: 90px;
+    bottom: -20px;
+    z-index: 104;
+    
+}
+
+.dame-1{
+    left: 530px;
+    height: 70px;
+    bottom: 110px;
+    animation: dame 8s linear forwards;
+}
+.dame-2{
+    left: 520px;
+    bottom: 170px;
+    height: 40px;
+    animation: dame 4s linear forwards;
+}
+.dame-3{
+    left: 500px;
+    height: 110px;
+    z-index: 103;
+    bottom 20px;
+    animation: dame 8s linear forwards;
+}
+
+@keyframes dame {
+    0%{
+        visibility: visible;
+        
+    }
+    
+    99%{
+        bottom: 235px;
+        visibility: visible;
+        height: 40px;
+        left:540px;
+    }
+  
+    100%{
+        bottom: 235px;
+        visibility: hidden;
+        height: 40px;
+        left:540px;
+    }
+}
+
+/*end dame-animation*/
+
+/* END LEAVING ENGLAND*/
+
+/**************/
+
+/* ARRIVING USA*/
+
+
+#brygge-wrap2{
+    height: 250px;
+    width:1500px;
+    bottom: 0;
+    right: -1700px;
+    animation: dockMoves2 6s linear forwards;
+    animation-delay: 18s;
+}
+
+#ramp2{
+    height: 205px;
+    bottom: 50px;
+    z-index: 102;
+    left: 790px;   
+
+}
+
+#dock2{
+    background-color: rgb(107,50,8);
+    width: 1200px;
+    height: 65px;
+    bottom: 0;
+    z-index: 101;
+    right: 0;
+    
+}
+
+#flag{
+    height: 250px;
+    bottom: 30px;
+    z-index: 101;
+    right:200px;
+    transform: rotate(-5deg);
+}
+
+#libertylink{
+    bottom: 0px;
+}
+#libertystatue{
+    height: 500px;
+    z-index: 101;
+    bottom: 0;
+    left:100px;
+    cursor: pointer;
+}
+
+#fire{
+    width: 20px;
+    bottom: 360px;
+    left: 70px;
+    transform: scale(2.0, 2);
+    border-radius: 80%;
+    animation: firefade 10s;
+    z-index: 103;
+}
+
+.flame
+{
+    width: 0px;
+    height: 0px;
+    background-color: darkorange;
+    bottom: 0px;
+    transform: rotate(45deg);
+    margin-bottom: 70px;
+    position: absolute;
+    border-radius: 30%;  
+}
+
+#liberty-click{
+    top: -220px;
+    left: 160px;
+    background-color: black;
+    opacity: 0;
+    animation: click-here 10s 30s infinite ease-in-out;
+}
+
+
+#liberty:target ~ #anim-container #brygge-wrap2 #fire .flame:nth-child(1){
+    animation: fire 2s linear 0s infinite;
+}
+#liberty:target ~ #anim-container #brygge-wrap2 #fire .flame:nth-child(2){
+    animation: fire 2s linear 0.5s infinite;
+}
+#liberty:target ~ #anim-container #brygge-wrap2 #fire .flame:nth-child(3){
+    animation: fire 2s linear 1s infinite;
+}
+#liberty:target ~ #anim-container #brygge-wrap2 #fire .flame:nth-child(4){
+    animation: fire 2s linear 1.5s infinite;
+}
+#liberty:target ~ #anim-container #brygge-wrap2 #fire .flame:nth-child(5){
+    animation: fire 2s linear 2s infinite;
+}
+
+@keyframes fire{
+    0%{
+        width:0;
+        height: 0;
+        margin-left: 30px;
+        background-color: #ffce00;
+        z-index: 1000;
+    }
+    50%{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 65px;
+        margin-left: 15px;
+        background-color: darkorange;
+    }
+    75%{
+   
+      z-index: 1;
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+        margin-bottom: 110px;
+        margin-left: 30px;
+        background-color: #ff0000;
+        z-index: 1;}
+}
+
+@keyframes dockMoves2 {
+    0%{
+       right: -1500px;
+    }
+    99%{
+       right: -1px;
+    }
+  
+    100%{
+        right: 0px;
+        
+    }
+}
+
+.mann2{
+    position: absolute;
+    height: 100px;
+    bottom: -40px;
+    z-index: 103;
+    display: none;
+}
+
+.mann-5{
+    left: 770px;
+    bottom: 20px;
+    z-index: 102;
+    animation: mann2 2s linear forwards;
+     
+}
+
+.mann-6{
+    left: 800px;
+    height: 75px;
+    bottom: 110px;
+    animation: mann2 4s linear forwards;
+}
+
+.mann-7{
+    left: 840px;
+    height: 120px;
+    z-index: 104;
+    animation: mann2 6s linear forwards; 
+}
+
+
+
+@keyframes mann2 {
+    0%{
+        bottom: 260px;
+        visibility: hidden;
+        height: 40px;
+        left:800px;
+       
+        
+    }
+    
+    99%{
+        bottom: 39px;
+        visibility: visible;
+    }
+  
+    100%{
+        bottom: 40px;
+         visibility: visible;
+        height: 115px;
+        
+        
+    }
+}
+
+#liberty:target ~ #anim-container .mann2{
+    visibility: visible;
+    display: block;
+}
+
+#liberty:target ~ #anim-container .dame2{
+    visibility: visible;
+    display: block;
+}
+
+
+/*end mann-animation*/
+
+.dame2{
+    
+    position: absolute;
+    height: 90px;
+    bottom: 20px;
+    z-index: 104;
+    display: none;
+    visibility: hidden;
+    animation-delay: 25s;
+    
+}
+
+.dame-4{
+    left: 730px;
+    height: 70px;
+    bottom: 110px;
+    animation: dame2 2s linear forwards;
+}
+.dame-5{
+    left: 820px;
+    bottom: 170px;
+    height: 40px;
+    animation: dame2 4s linear forwards;
+}
+.dame-6{
+    left: 800px;
+    height: 110px;
+    z-index: 103;
+    animation: dame2 6s linear forwards;
+}
+
+@keyframes dame2 {
+    0%{
+        bottom: 260px;
+        height: 40px;
+        visibility: hidden;
+        left:800px;
+        
+    }
+    
+    10%{
+        bottom: 
+    }
+    
+    99%{
+        bottom: 39px;
+        visibility: visible;
+    }
+  
+    100%{
+        bottom: 40px;
+        visibility: visible;
+        height: 110px;
+        
+    }
+}
+
+/***END ARRIVING USA*****/
+
+/***TITANIC***/
+
+#titanic-wrap {
+    width: 1050px;
+    bottom: 45px;
+    height: 500px;
+    left: 40px;
+    opacity: 1;
+    
+}
+
+#titanic-wrap:hover > #smoke-wrap-1 {
+    opacity: 0;
+} 
+#titanic-wrap:hover > #smoke-wrap-2 {
+    opacity: 0;
+} 
+#titanic-wrap:hover > #smoke-wrap-3 {
+    opacity: 0;
+} 
+#titanic-wrap:hover > #smoke-wrap-4 {
+    opacity: 0;
+} 
+
+#titanic{
+    width: 1050px;
+    bottom: 0;
+    z-index: 99;
+}
+
+#smoke-wrap-1 {
+    width:60px;
+    height:200px;
+    left: 290px;
+    bottom:396px;
+    z-index: 98;
+    transition: all 1s linear;
+}
+
+#smoke-wrap-2 {
+    width:60px;
+    height:200px;
+    left: 410px;
+    bottom:396px;
+    z-index: 98;
+    transition: all 1s linear;
+}
+
+#smoke-wrap-3 {
+    width:60px;
+    height:200px;
+    left: 550px;
+    bottom:396px;
+    z-index: 98;
+    transition: all 1s linear;
+}
+
+#smoke-wrap-4 {
+    width:60px;
+    height:200px;
+    left: 690px;
+    bottom:396px;
+    z-index: 98;
+    transition: all 1s linear;
+}
+
+/***END TITANIC***/
+
+/*****END OF EXPECTED SCENARIO *******/
+
+/***THE REALITY*******/
+
+#anim-container-2{
+    background-color: #30304E;
+    width: 1440px;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    display: none;
+}
+
+#anim-container-2 * {
+    position: absolute;
+}
+
+#waves2{
+    bottom: 0;
+    height:90px;
+    width: 100%;
+    background-color: darkblue; 
+}
+
+#moon{
+    border-radius: 50% ;
+    background: radial-gradient(circle, #C1BF9E, rgba(255, 255, 230, 0.1));
+    width: 150px;
+    height: 150px;
+    right: 200px; 
+    top:50px;
+}
+
+/**ICE SECTION***/
+
+#ice {
+    right:-400px;
+    height: 300px;
+    bottom: 40px;
+    z-index: 150;
+    animation: iceberg 15s linear 2s forwards;
+}
+
+#ice-area {
+    height: 150px;
+    width: 300px;
+    bottom: 90px;
+    z-index: 1;
+    right:100px;   
+}
+
+#background-ice {
+    height: 150px;
+    bottom: 0;    
+    z-index: 1;
+    right: 0;
+    transition: all 1.4s ease;
+}
+
+#ice-area:hover > #background-ice {
+    bottom: -340px;    
+}
+
+@keyframes iceberg {
+    30%{
+        right:700px
+    }
+    100%{
+        right:1920px;
+    }
+}
+
+/**END ICE SECTION***/
+
+/**TITANIC***/
+
+#titanic-wrap-2 {
+    width: 1050px;
+    bottom: 0px;
+    height: 400px;
+    left:0px;
+    z-index:99;
+    animation: sink 10s linear 5s forwards;
+}
+
+#titanic-subwrap {
+    width: 1050px;
+    bottom: 0px;
+    height: 400px;
+    left:0px;
+    animation: shake 3s linear 4.3s;
+}
+
+#titanicfor{
+    height: 391.68px;
+    bottom: 0;
+    z-index: 99;
+    right:0;
+}
+
+#titanic-frontwrap{
+    height: 400px;
+    width:546px;
+    bottom: 0;
+    z-index: 99;
+    right:0;
+}
+
+#titanicbak{
+    height: 391.68px;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+}
+
+#titanic-backwrap{
+    height: 550px;
+    width: 540px;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    /*animation: snap 3s linear 19s forwards; */
+}
+
+#man-jump-click{
+    top: 420px;
+    left: 50px;
+    background-color: white;
+    opacity: 0;
+}
+
+.click-here{
+    height: 75px;
+    width: 75px;
+    transform: scale(1);
+    opacity: 0;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 999;
+    
+}
+
+@keyframes click-here{
+  0%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  7.5%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  7.5001%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  15%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  15.0001%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  22.5%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  22.5001%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+#targetbox1:target ~ #anim-container-2 #titalink #titanic-backwrap #man-jump-click{
+  animation: click-here 10s 20s infinite ease-in-out;
+}
+
+@keyframes snap {
+    30%{
+        bottom:-300px;
+    }
+    60%{
+        transform: rotate(0deg;)
+    }
+    100%{
+        transform: rotate(-95deg);
+        bottom: -500px;
+    }
+}
+
+.inactivelink {
+    animation: link 15s linear forwards;
+}
+
+@keyframes link {
+    0%{
+        pointer-events: none;
+        cursor: default;
+    }
+    99%{
+        pointer-events: none;
+        cursor: default;
+    }
+    100%{
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
+
+#titalink {
+    height: 391.68px;
+    bottom: 45px;
+    height: 550px;
+    left:20px;    
+}
+
+#targetbox:target ~ #anim-container-2 #man {
+    animation: jump 2.5s linear forwards;
+}
+
+#targetbox:target ~ #anim-container-2 #titalink #titanic-wrap-2{
+    animation: sink 0s linear 0s forwards;
+}
+
+
+#targetbox:target ~ #anim-container-2 #ice {
+    animation: iceberg 0s linear 0s forwards;
+}
+
+#targetbox:target ~ #anim-container-2 #titalink #titanic-backwrap{
+    animation: snap 3s linear 3s forwards;
+}
+
+#targetbox:target ~ #anim-container-2 #titalink #titanic-subwrap{
+    animation: shake 3s linear 2s forwards;
+}
+
+#targetbox:target ~#anim-container {
+    display: none;
+}
+
+#targetbox:target ~#anim-container-2 {
+    display: block;
+}
+
+@keyframes sink {
+    100%{
+        transform: rotate(40deg);
+        bottom: -100px;
+        left:200px;
+    }
+}
+
+@keyframes shake {
+    1%{
+        transform: translate(1px, 1px);
+    }
+    3%{
+        transform: translate(-1px, -2px);    
+    }
+    5%{
+        transform: translate(-3px, 2px);    
+    }
+    7%{
+        transform: translate(1px, -2px);    
+    }
+    9%{
+        transform: translate(-2px, 2px);    
+    }
+    11%{
+        transform: translate(1px, -2px);    
+    }
+    12%{
+        transform: translate(1px, 1px);
+    }
+    14%{
+        transform: translate(-1px, -2px);    
+    }
+    16%{
+        transform: translate(-3px, 2px);    
+    }
+    18%{
+        transform: translate(1px, -2px);   
+    }
+    20%{
+        transform: translate(-2px, 2px);    
+    }
+    22%{
+        transform: translate(1px, -2px);    
+    }
+    24%{
+        transform: translate(1px, 1px);
+    }
+    26%{
+        transform: translate(-1px, -2px);    
+    }
+    28%{
+        transform: translate(1px, 1px);
+    }
+    30%{
+        transform: translate(-1px, -2px);    
+    }
+    32%{
+        transform: translate(-3px, 2px);    
+    }
+    34%{
+        transform: translate(1px, -2px);    
+    }
+    36%{
+        transform: translate(-2px, 2px);    
+    }
+
+   38%{
+        transform: translate(1px, 1px);    
+    }
+}
+
+#man {
+    height: 80px;
+    left: 330px;
+    z-index:151;
+    bottom: 470px;
+    opacity: 0;
+    animation: manVisi 0.1s linear 15.2s forwards;
+}
+
+@keyframes manVisi{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes jump {
+    0%{
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+        left:160px;
+        bottom: 500px;
+    }
+    40%{
+        left:100px;
+        bottom: 400px;
+        transform: rotate(-160deg); 
+        opacity: 1;
+    }
+    100%{
+        left:80px;
+        bottom: -50px;
+        transform: rotate(-170deg);
+        opacity: 1;
+    }
+    
+}
+
+#smoke-wrap-2-1 {
+    width:60px;
+    height:200px;
+    left: 40px;
+    bottom:396px;
+    z-index: 98;
+}
+
+#smoke-wrap-2-2 {
+    width:60px;
+    height:200px;
+    left: 180px;
+    bottom:396px;
+    z-index: 98;
+}
+
+#smoke-wrap-2-3 {
+    width:60px;
+    height:200px;
+    left: 410px;
+    bottom:396px;
+    z-index: 98;
+}
+
+#smoke-wrap-2-4 {
+    width:60px;
+    height:200px;
+    left: 290px;
+    bottom:396px;
+    z-index: 98;
+|}
+
+.smoke {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #5A4B4B;
+    visibility: hidden;
+    
+}
+
+.smoke-1 {
+    bottom: -10px;
+    left:0;
+    animation: smoke 2s linear 0s infinite;
+}
+
+.smoke-2 {
+    bottom: -10px;
+    left:12px;
+    animation: smoke 2s linear 0.2s infinite;
+}
+
+.smoke-3 {
+    bottom: -10px;
+    animation: smoke 2s linear 0.4s infinite;
+}
+
+.smoke-4 {
+    bottom: -10px;
+    left:14px;
+    animation: smoke 2s linear 0.6s infinite;
+}
+
+.smoke-5 {
+    bottom: -10px;
+    animation: smoke 2s linear 0.8s infinite;
+}
+
+.smoke-6 {
+    bottom: -10px;
+    left:15px;
+    animation: smoke 2s linear 1s infinite;
+}
+
+.smoke-7 {
+    bottom: -10px;
+    animation: smoke 2s linear 1.2s infinite;
+}
+
+.smoke-8 {
+    bottom: -10px;
+    left:10px;
+    animation: smoke 2s linear 1.4s infinite;
+}
+
+.smoke-9 {
+    bottom: -10px;
+    animation: smoke 2s linear 1.6s infinite;
+}
+
+.smoke-10 {
+    bottom: -10px;
+    left:11px;
+    animation: smoke 2s linear 1.8s infinite;
+}
+
+@keyframes smoke{
+    25%{
+        visibility: visible; 
+    }
+    
+    100%{
+        bottom: 135px;
+        opacity:0.2;
+    }
+}
+
+/***END TITANIC***/
+
+
+/***CLOUDS, WAVES AND STARS***/
+
+.cloud {
+    width: 300px;
+}
+
+.cloud-1 {
+    right:-350px;
+    top: 90px;
+    animation: clouds 50s linear 0s infinite;
+}
+
+.cloud-2 {
+    right:-350px;
+    top:70px;
+    animation: clouds 50s linear 10s infinite;
+}
+
+.cloud-3 {
+    right: -350px;
+    top:120px;
+    animation: clouds 50s linear 20s infinite;
+}
+
+.cloud-4 {
+    right: -350px;
+    top:70px;
+    animation: clouds 50s linear 30s infinite;
+}
+
+.cloud-5 {
+    right: -350px;
+    top:90px;
+    animation: clouds 50s linear 40s infinite;
+}
+
+@keyframes clouds {
+    100%{
+        right:1700px;
+    }
+}
+
+.waves-2{
+    bottom: 0;
+    height: 150px;
+    left: -60px;
+    z-index: 999;
+}
+
+.wave-1{
+    left: 0px;
+    animation: wave1 3s ease infinite;
+}
+.wave-2{
+    left: 90px;
+    animation: wave2 3s ease infinite;
+}
+.wave-3{
+    left: 0px;
+    animation: wave1 3s ease infinite;
+}
+.wave-4{
+    left: 160px;
+    animation: wave2 3s ease infinite;
+}
+
+@keyframes wave1{
+    50%{
+        transform: translate(-20px, 20px);
+    }
+}
+
+@keyframes wave2{
+    50%{
+        transform: translate(20px, 5px);
+    }
+}
+
+/***END OF CLOUD AND WAVES***/
+
+/**END OF REALITY****/
+
+/*** POPUP START ***/
+#arnfinn1 #popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  animation: pop 1s 0s forwards;
+  transform-origin: right;
+}
+
+#arnfinn2 #popup-head, #arnfinn3 #popup-head{
+  height: 220px;
+  width: 135px;
+  right: 35px;
+  top: 25px;
+  transform-origin: right;
+}
+
+
+#head-link{
+  height: 220px;
+  width: 135px;
+  right: 0px;
+  top: 0px;
+  transform: rotate(0deg);
+    z-index: 999;
+}
+
+#head-link:hover{
+  transform-origin: center;
+  animation: hover-wiggle 2s 0s;
+}
+
+.popup-speech-buble{
+    width: 220px;
+    height: 145px;
+    padding: 15px;
+    top: 25px;
+    right: 200px;
+    opacity: 0;
+    background-color: #fafafa;
+    border-radius: 20%;
+    transform-origin: bottom right;
+    z-index: 999;
+}
+
+#arnfinn1 #popup-speech-bubble1{
+    animation: pop-in-long 5s 0.1s forwards;
+}
+
+.bubble-pointer-popup{
+  width: 60px;
+  top: 85%;
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+.popup-tekst{
+  font-family: 'Roboto Slab', serif, "roboto", "arial", "helvetica";
+  font-size: 18px;
+  text-align: right;
+  position: relative !important;
+}
+/*** POPUP END ***/
+
+
+/*** THE END ***/
+#arnfinn1, #arnfinn2, #arnfinn3{
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#klar:target ~ #anim-container #arnfinn1{
+    display: block;
+    z-index: 999;
+}
+
+#klar:target ~ #anim-container *{
+    animation-play-state:paused !important;
+}
+
+#klar:target ~ #anim-container #arnfinn1 *{
+    animation-play-state:running !important;
+}
+
+#liberty:target ~ #anim-container #arnfinn2 {
+    z-index: 999 !important;
+    animation-play-state:running !important;
+    animation: pop 1s 0s forwards;
+}
+
+#liberty:target ~ #anim-container #arnfinn2 #popup-head{
+    animation-play-state:running !important;
+    animation: pop 1s 6s forwards;
+}
+
+#liberty:target ~ #anim-container #arnfinn2 #popup-speech-bubble1{
+    animation-play-state:running !important;
+    animation: pop-in-long 5s 6.1s forwards;
+}
+
+
+
+#targetbox:target ~ #anim-container-2 #arnfinn3 {
+    z-index: 999 !important;
+    animation-play-state:running !important;
+    animation: pop 1s 0s forwards;
+}
+
+#targetbox:target ~ #anim-container-2 #arnfinn3 #popup-head{
+    animation-play-state:running !important;
+    animation: pop 1s 6s forwards;
+}
+
+#targetbox:target ~ #anim-container-2 #arnfinn3 #popup-speech-bubble1{
+    animation-play-state:running !important;
+    animation: pop-in-long 5s 6.1s forwards;
+}
+
+
+#arnfinn2, #arnfinn3{
+    transition: z-index 2s linear;
+    transition-delay: 6s;
+}
+
+
+
+
+
+
+/*** THE END ***/
+
+
+/*** ANIMATIONS START ***/
+
+@keyframes pop{
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1.0);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  20% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  40% {
+    transform: scale3d(.91, .91, .91);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop-in-out{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+}
+
+@keyframes pop-in-long{
+  0% {
+    opacity: 0;
+    transform: scale3d(.32, .32, .32);
+  }
+  5% {
+    transform: scale3d(1.12, 1.12, 1.12);
+  }
+  10% {
+    transform: scale3d(.91, .91, .91);
+  }
+  15% {
+    opacity: 1;
+    transform: scale3d(1.035, 1.035, 1.035);
+  }
+  20% {
+    transform: scale3d(.97, .97, .97);
+  }
+  25% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*** ANIMATIONS END ***/

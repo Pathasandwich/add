@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!----
+----   @author(Andreas Græsmo & Birgitte Bø)
+    Birgitte fokuserte på der Columbus treffer India, altså forventet scenario.
+    Andreas fokuserte på der Columbus treffer Amerika, altså det ekte scenarioet.
+    Vi har også hjulpet hverandre med tekniske detaljer.
+--->
+<html>
+<head>
+<link rel="stylesheet" href="columbus.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<title>Columbus</title>
+
+</head>
+<body>
+
+<div id="klar"></div>
+<div id="anim1"></div>
+<div id="moveSpice"></div>
+<div id="anim2"></div>
+<div id="cctarget"></div>
+
+<div id="anim-container">
+    <div id="sun"></div>
+    <img id="land" src="img/strand.svg">
+
+    <!--CLOUDS-->
+    <img class="cloud cloud-1" src="img/cloudw.svg">
+    <img class="cloud cloud-2" src="img/cloudw.svg">
+    <img class="cloud cloud-3" src="img/cloudw.svg">
+    <img class="cloud cloud-4" src="img/cloudw.svg">
+    <img class="cloud cloud-5" src="img/cloudw.svg">
+    <!--END CLOUDS-->
+
+    <img class="waves wave-1" src="img/wave-1.svg">
+    <img class="waves wave-2" src="img/wave-2.svg">
+
+    <div id="arnfinn1">
+        <a id="head-link" href="#anim1">
+          <div id="popup-head">
+            <img src="img/arnfinn-head.svg">
+          </div>
+        </a>
+
+        <div class="snakkeboble popup-speech-buble" id="popup-speech-bubble1">
+            <img class="bubble-pointer-popup" src="img/speech-bubble-point-01.svg">
+            <p class="popup-tekst">Dette var slik Columbus så for seg den fremtidige reisen sin! Trykk på meg for å gå videre! </p>
+        </div>
+    </div><!--end arfinn1-->
+
+    <div id="arnfinn2">
+        <a id="head-link" href="#anim2">
+          <div id="popup-head">
+            <img src="img/arnfinn-head.svg">
+          </div>
+        </a>
+
+        <div class="snakkeboble popup-speech-buble" id="popup-speech-bubble1">
+            <img class="bubble-pointer-popup" src="img/speech-bubble-point-01.svg">
+            <p class="popup-tekst">Slik gikk det ikke dessverre! Trykk på meg for å se Columbus sin fremtid! </p>
+        </div>
+    </div><!--end arfinn2-->
+
+
+
+    <div id="skip-columbus">
+        <img id="skip" src="img/columbusSkip.svg">
+        <img id="cc-map" src="img/CCmap.png">
+        <p id="cc-speech"> Nå skal jeg endelig finne en raskere vei til India.</p>
+    </div><!--end skip-columbus-->
+
+
+    <img id="fish" src="img/fish.png">
+
+
+    <div id="india">
+        <img id="land2" src="img/strand.svg">
+        <img id="taj-mahal" src="img/taj-mahal.png">
+        <div id="indian-wrap">
+            <img id="spices" src="img/spice-cart.svg">
+            <img id="indian" src="img/indianMan.png">
+            <p id="indian-speech">Hei! Velkommen til India. Vil du kjøpe noe krydder?</p>
+        </div><!--end indian-wrap-->
+
+        <a id="mandalaLink" href="#moveSpice">
+        <div id="mandala-click" class="click-here"></div>
+        <img id="mandala" src="img/mandala.png">
+        </a>
+    </div><!--end india-->
+
+</div><!--end anim-container-->
+
+<div id="anim-container-2">
+
+    <div id="arnfinn3">
+                <a id="head-link" href="kart.html#columbus-return">
+                  <div id="popup-head">
+                    <img src="img/arnfinn-head.svg">
+                    </div>
+                </a>
+
+                <div class="snakkeboble popup-speech-buble" id="popup-speech-bubble1">
+                    <img class="bubble-pointer-popup" src="img/speech-bubble-point-01.svg">
+                    <p class="popup-tekst">Det er det jeg kaller hell i uhell! Tenk at Amerika ble "funnet" slik! Trykk på meg hvis du vil se på kartet igjen! </p>
+                </div>
+            </div><!--end arfinn3-->
+
+    <div id="sun"></div>
+
+    <img class="waves wave-1" src="img/wave-1.svg">
+    <img class="waves wave-2" src="img/wave-2.svg">
+
+
+    <div id="skip-columbus2">
+       <div id="ship2-click" class="click-here"></div>
+        <img id="skip2" src="img/columbusSkip.svg">
+        <a id="cclink2" class="inactivelink" href="#cctarget">
+            <img id="cc-map2" src="img/CCmap.png">
+        </a>
+        <p id="cc-speech"> Dette er ikke helt som jeg forestilte meg!?</p>
+    </div> <!--end skip-columbus2-->
+
+
+    <img id="beach" src="img/strand.svg">
+    <img id="tipi" src="img/tipi.svg">
+
+    <div id="cc-fremme-wrap">
+        <img id="cc-fremme" src="img/ColumbusFremme.png">
+        <p id="cc-speech-fremme">Jeg har visst bommet litt på India, kan du veien?</p>
+    </div><!--end cc-fremme-wrap-->
+
+
+    <div id="indianer-wrap">
+        <img id="indianer" src="img/indianer.svg">
+        <p id="in-speech">Altså jeg skjønner at du kunne bommet med ett land, men et helt kontinent? Hva er det du driver med?</p>
+        <img id="smoke" src="img/royk.svg">
+    </div><!--end indianer-wrap-->
+
+    <!--Cloud segment-->
+    <img class="cloud cloud-1" src="img/cloudw.svg">
+    <img class="cloud cloud-2" src="img/cloudw.svg">
+    <img class="cloud cloud-3" src="img/cloudw.svg">
+    <img class="cloud cloud-4" src="img/cloudw.svg">
+    <img class="cloud cloud-5" src="img/cloudw.svg">
+
+    <!--End cloud segment-->
+
+</div><!--end anim-container-2-->
+
+</body>
+</html>
